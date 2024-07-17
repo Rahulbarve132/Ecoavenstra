@@ -4,7 +4,7 @@ import Social from './Social';
 
 const LandingPage = () => {
   return (
-    <div className='relative h-screen'>
+    <div className='relative h-screen '>
       <div className='w-full absolute inset-0 overflow-hidden'>
         <video className='videoTag aspect-video w-full h-full object-cover ' autoPlay loop muted>
           <source src={background_1} type='video/mp4' />
@@ -14,7 +14,7 @@ const LandingPage = () => {
       <div className='absolute inset-0 flex flex-col items-center justify-center text-white z-10 px-4'>
         <div className='text-white font-bold flex flex-col sm:flex-row gap-2 text-3xl sm:text-5xl heading pt-10 text-center sm:text-left'>
           <div>Elevate your</div>
-          <div className='bg-gradient-to-r from-blue-600 via-green-500 to-blue-600 inline-block text-transparent bg-clip-text'>Digital Presence</div>
+          <div className='bg-gradient-to-r z-10 h-16 from-blue-600 via-green-500 to-blue-600  text-transparent bg-clip-text'>Digital Presence</div>
           <div>with Ecoavenstra!</div>
         </div>
 

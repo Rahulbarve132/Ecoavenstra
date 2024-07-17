@@ -2,6 +2,10 @@ import React from 'react'
 import LandingPage from './LandingPage'
 import OurClients from './OurClients'
 import WhyChoose from './WhyChoose'
+import Tchnology from './Tchnology'
+import Testimonials from './Testimonials'
+import Recommendation from './Recommendation'
+import BlogSection from './BlogSection'
 
 const Body = () => {
   return (
@@ -9,6 +13,10 @@ const Body = () => {
       <LandingPage/>
       <OurClients/>
       <WhyChoose/>
+      <Tchnology/>
+      <Recommendation/>
+      <Testimonials/>
+      <BlogSection/>
     </div>
   )
 }

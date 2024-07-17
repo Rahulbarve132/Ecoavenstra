@@ -6,7 +6,7 @@ import whatsapp from "../assets/whatsapp.png"
 
 const Social = () => {
   return (
-    <div className='aspect-square object-contain flex flex-col pt-32 gap-4 px-3'>
+    <div className='aspect-square object-contain flex md:flex-col flex-row md:pt-32  gap-4 px-3'>
       <div className='size-8 object-contain hover:scale-110'>
         <img className='' src={instagram} alt="instagram" />
       </div>

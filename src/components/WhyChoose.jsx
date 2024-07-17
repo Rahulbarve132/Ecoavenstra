@@ -1,16 +1,18 @@
 import React from 'react'
 import { FaCheckCircle } from "react-icons/fa";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const WhyChoose = () => {
-  
+  AOS.init();
   return (
     <div className='px-4 py-8'>
-      <div className='text-white text-3xl sm:text-5xl flex justify-center font-semibold pt-4 pb-10 sm:pb-20'>
+      <div data-aos="fade-up" className='text-white text-3xl sm:text-5xl flex justify-center font-semibold pt-4 pb-10 sm:pb-20'>
         WHY ECOAVENSTRA ?
       </div>
 
       <div className='flex flex-col sm:flex-row justify-center gap-6 sm:gap-10'>
-        <div className='others w-full sm:w-1/4 bg-[#353535] rounded-2xl h-auto sm:h-[550px] flex justify-start flex-col p-4 sm:p-6'>
+        <div data-aos="fade-right" className='others w-full sm:w-1/4 bg-[#353535] rounded-2xl h-auto sm:h-[550px] flex justify-start flex-col p-4 sm:p-6'>
             <div className='text-white text-2xl sm:text-3xl font-semibold py-4 flex justify-center'>
                 OTHERS
             </div>
@@ -27,7 +29,7 @@ const WhyChoose = () => {
             </div>
         </div>
 
-        <div className='Ecoavenstra w-full sm:w-1/4 bg-blue-600 rounded-2xl h-auto sm:h-[550px] flex justify-start flex-col p-4 sm:p-6'>
+        <div data-aos="fade-left" className='Ecoavenstra w-full sm:w-1/4 bg-blue-600 rounded-2xl h-auto sm:h-[550px] flex justify-start flex-col p-4 sm:p-6'>
             <div className='text-white text-2xl sm:text-3xl font-semibold py-4 flex justify-center'>
                 AT ECOAVENSTRA
             </div>
