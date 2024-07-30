@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const testimonials = [
   {
-    text: "Especially developer team helped me a lot in some customizing topics. Top-Notch! I recommend this theme to everyone who is looking to build a strong Prestashop E-commerce website.",
+    text: "Especially developer team helped me a lot in some customizing topics. Top-Notch! I recommend this theme to everyone ",
     name: "Giannis Mourelatos",
     work: "Owner",
     image: "https://via.placeholder.com/50",

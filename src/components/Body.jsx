@@ -6,6 +6,7 @@ import Tchnology from './Tchnology'
 import Testimonials from './Testimonials'
 import Recommendation from './Recommendation'
 import BlogSection from './BlogSection'
+import HomeServices from './HomeServices'
 
 const Body = () => {
   return (
@@ -13,6 +14,7 @@ const Body = () => {
       <LandingPage/>
       <OurClients/>
       <WhyChoose/>
+      <HomeServices/>
       <Tchnology/>
       <Recommendation/>
       <Testimonials/>
