@@ -22,7 +22,7 @@ const Header = () => {
   };
 
   return (
-    <div className='flex w-full bg-[#000000] h-14 justify-between items-center'>
+    <div className='sticky top-0 flex w-full bg-[#000000]  h-14 justify-between items-center z-50'>
       <Title />
       <div className='hidden md:flex items-center mx-6'>
         <Navbar />
@@ -45,7 +45,7 @@ const Header = () => {
               <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M6 18L18 6M6 6l12 12'></path>
             </svg>
           </button>
-          <Navbar />
+          <Navbar toggleSidebar={toggleSidebar} />
         </div>
       </div>
     </div>
