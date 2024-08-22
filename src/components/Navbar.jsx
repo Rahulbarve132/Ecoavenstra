@@ -56,7 +56,7 @@ const Navbar = ({ toggleSidebar }) => {
             type="button"
             onClick={toggleDropdown}
             className="w-10 h-10 rounded-full cursor-pointer"
-            src="src/assets/testimonial 1.jpeg"
+            src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png"
             alt="User dropdown"
           />
           {dropdownOpen && (
