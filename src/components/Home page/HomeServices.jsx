@@ -5,6 +5,7 @@ import digital from "../../assets/Digital-Marketing-Services.png"
 import UiUx from "../../assets/Designing-Services.png"
 import openSource from "../../assets/Open-Source-Development-2.png"
 import HireDevelopers from "../../assets/Hire-Developers.png"
+import { useNavigate } from 'react-router-dom';
 
 
 const services = [
@@ -47,6 +48,12 @@ const services = [
 ];
 
 const HomeServices = () => {
+  const navigate = useNavigate();
+
+  const Services = () =>{
+    navigate("/services")
+  }
+
   return (
     <section className="bg-black text-white py-8">
       <div className="container mx-auto text-center">
@@ -63,7 +70,7 @@ const HomeServices = () => {
             </div>
           ))}
         </div>
-        <button className="mt-8 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">All Services</button>
+        <button onClick={Services} className="mt-8 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">All Services</button>
       </div>
     </section>
   );

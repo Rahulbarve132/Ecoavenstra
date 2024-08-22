@@ -10,6 +10,7 @@ import Jobs from './components/Jobs';
 import ContactUs from './components/ContactUs';
 import LogIn from './components/LogIn';
 import toast, { Toaster } from 'react-hot-toast';
+import EmployerForm from './components/EmployerForm';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path="/jobs" element={<Jobs />} />
         <Route path="/contact-us" element={<ContactUs/>} />
         <Route path="/login" element={<LogIn/>} />
+        <Route path='/employerform' element={<EmployerForm/>}/>
       </Routes>
       <Footer />
     </Router>

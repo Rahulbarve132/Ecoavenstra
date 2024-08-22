@@ -63,10 +63,11 @@ const BlogPage = () => {
       try {
         setLoading(true);
         const response = await axios.get('https://ecoavenstra-be.onrender.com/api/v1/admin/articles');
-        setArticles(response.data.length > 0 ? response.data : dummyArticles);
+        setArticles(response?.data?.articles.length > 0 ? response?.data?.articles : dummyArticles);
+        console.log(response.data)
       } catch (error) {
         console.error('Error fetching articles:', error);
-        setArticles(dummyArticles);
+        // setArticles(dummyArticles);
       } finally {
         setLoading(false);
       }
@@ -91,6 +92,8 @@ const BlogPage = () => {
   };
 
   const featuredArticle = articles[0] || dummyArticles[0];
+
+  console.log(articles)
 
   return (
     <div className='px-4 sm:px-8 md:px-16 main-container'>

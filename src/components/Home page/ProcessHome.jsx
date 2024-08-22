@@ -10,23 +10,28 @@ const ProcessHome = () => {
   const steps = [
     {
       number: '01',
-      title: 'Client Familiarization.',
-      description: 'The first step of every success story at Think To Share starts with us getting to know you and your company as we take our time to understand your vision and assess your business growth needs.'
+      title: 'Initial Engagement',
+      description: 'The first step involves initial contact, understanding your needs, and setting up meetings to explore your vision and business requirements.'
     },
     {
       number: '02',
-      title: 'Data-based Market Research and team Understanding.',
-      description: 'The second step is when we categorize our understanding of your current business situation and measure it with the yardstick of your competitors situations with extensive market research'
+      title: 'Planning & Documentation',
+      description: 'We gather requirements, plan the project, estimate costs, and create necessary documentation including proposals, agreements, and technical specs.'
     },
     {
       number: '03',
-      title: 'Plan-Of-Action & Strategy Formulation',
-      description: 'The third step of this journey is when we create an action plan and formulate data-based strategies based on our services to find solutions that improve your business standing and brand authority.'
+      title: 'Design & Development',
+      description: 'In this step, we focus on designing the user interface and experience, followed by the development of the front-end, back-end, and database using relevant technologies.'
     },
     {
       number: '04',
-      title: 'Strategy Execution',
-      description: 'We come to the last step of this growth journey as we execute our plan of action so that all the research, planning and execution brings to fruition concrete results in the form of your business growth.'
+      title: 'Testing & Integration',
+      description: 'After development, we rigorously test the application and integrate various components to ensure everything works smoothly.'
+    },
+    {
+      number: '05',
+      title: 'Launch & Post-Launch',
+      description: 'Finally, we launch the product, provide user training, and offer ongoing maintenance and support to ensure long-term success.'
     }
   ];
 
@@ -48,7 +53,7 @@ const ProcessHome = () => {
           <div key={index} className="flex items-start relative">
             <div className="absolute -left-4 w-16 h-16 bg-orange-500 rounded-full flex flex-col items-center justify-center text-3xl font-bold z-10">
               <div>{step.number}</div>
-              <div className="font-thin text-xs">Steps</div>
+              <div className="font-thin text-xs">Step</div>
             </div>
             <div className="ml-20">
               <h4 className="text-orange-500 font-bold mb-1">{step.title}</h4>
