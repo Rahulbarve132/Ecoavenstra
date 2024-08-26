@@ -21,8 +21,8 @@ const LandingPage = () => {
         <div className="py-4 sm:py-[5%] sub-heading text-center">
           <ul className="flex flex-col sm:flex-row gap-4 sm:gap-20 font-semibold text-lg sm:text-xl">
             <li>Landing Page & Portfolio Development</li>
-            <li>Software Design & Development</li>
-            <li>Digital Marketing</li>
+            <li>Web / Software Design & Development</li>
+            
           </ul>
         </div>
 

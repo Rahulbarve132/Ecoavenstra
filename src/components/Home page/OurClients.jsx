@@ -15,7 +15,7 @@ const OurClients = () => {
   return (
     <div className='py-4'>
       <div className='text-white flex justify-center py-4 text-3xl md:text-5xl font-semibold '>
-        OUR CLIENTS
+        Our Clients
       </div>
       <div className='logos'>
         <div className='logos-slide flex'>

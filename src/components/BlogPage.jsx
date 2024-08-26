@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import "./Spinner.css"
 
 
 const BlogPage = () => {
@@ -39,7 +40,18 @@ const BlogPage = () => {
   };
 
   if (loading) {
-    return <div className="w-full h-96 bg-gray-800 animate-pulse rounded-xl"></div>;
+    return (
+      <div className='h-[90vh] flex w-full justify-center items-center'>
+      <div class="spinner">
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+    );
   }
 
   return (
@@ -79,7 +91,7 @@ const BlogPage = () => {
         <div className='section-title text-2xl text-white mb-4'>Recent Articles</div>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {recentArticles.map((article) => (
-            <div key={article.id} className='article-card bg-gray-800 rounded-xl p-4'>
+            <div key={article.id} className='article-card rounded-xl p-4'>
               <div className='article-image'>
                 <img className='w-full h-40 object-cover rounded-xl mb-4' src={article.coverImage} alt={article.title} />
               </div>
@@ -89,7 +101,7 @@ const BlogPage = () => {
                   {truncateDescription(article.shortDescription, 20)}
                 </div>
                 <div className='mt-4'>
-                  <Link to={`/article/${article.id}`}>
+                  <Link to={`blogs/article/${article.id}`}>
                     <button className='flex justify-center items-center gap-2 text-blue-500 font-semibold'>
                       Read More <FaArrowRight size={12} color='#1d5fd3' />
                     </button>

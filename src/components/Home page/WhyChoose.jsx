@@ -12,7 +12,7 @@ const WhyChoose = () => {
       </div>
 
       <div className='flex flex-col sm:flex-row justify-center gap-6 sm:gap-10'>
-        <div data-aos="zoom-out-up" className='others w-full sm:w-1/4 bg-[#353535] rounded-2xl h-auto sm:h-[550px] flex justify-start flex-col p-4 sm:p-6'>
+        <div data-aos="zoom-out-up" className='others w-full sm:w-1/4 bg-[#353535] hover:bg-blue-600 hover:transition-transform hover:duration-200  rounded-2xl h-auto sm:h-[550px] flex justify-start flex-col p-4 sm:p-6'>
             <div className='text-white text-2xl sm:text-3xl font-semibold py-4 flex justify-center'>
                 Others
             </div>
@@ -29,7 +29,7 @@ const WhyChoose = () => {
             </div>
         </div>
 
-        <div data-aos="zoom-out-up" className='Ecoavenstra w-full sm:w-1/4 bg-blue-600 rounded-2xl h-auto sm:h-[550px] flex justify-start flex-col p-4 sm:p-6'>
+        <div data-aos="zoom-out-up" className='Ecoavenstra w-full sm:w-1/4 bg-[#353535] hover:bg-green-600  rounded-2xl h-auto sm:h-[550px] flex justify-start flex-col p-4 sm:p-6'>
             <div className='text-white text-2xl sm:text-3xl font-semibold py-4 flex justify-center'>
                 At Ecoavenstra
             </div>

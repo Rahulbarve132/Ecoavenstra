@@ -38,30 +38,30 @@ const ProcessHome = () => {
   return (
     <div className="bg-black text-white p-8 py-20 flex flex-col md:flex-row">
       <div className="w-full md:w-1/2 pr-0 md:pr-8 flex flex-col justify-center items-center mb-8 md:mb-0">
-        <div className="text-4xl font-semibold mb-2 bg-purple-200 text-black p-2 w-full md:w-[400px] flex justify-center py-8 transform transition-transform duration-700 -skew-y-6 hover:skew-y-1 ease-in-out">
+        <div className="text-4xl font-semibold mb-2 bg-blue-200 text-black p-2 w-full md:w-[400px] flex justify-center py-8 transform transition-transform duration-700 -skew-y-6 hover:skew-y-1 ease-in-out">
           Our process
         </div>
-        <div className="text-4xl font-semibold mb-2 bg-pink-200 text-black p-2 w-full md:w-[400px] flex justify-center py-8 transform transition-transform duration-700 skew-y-3 hover:skew-y-6 ease-in-out">
+        <div className="text-4xl font-semibold mb-2 bg-green-200 text-black p-2 w-full md:w-[400px] flex justify-center py-8 transform transition-transform duration-700 skew-y-3 hover:skew-y-6 ease-in-out">
           Simple, seamless
         </div>
-        <div className="text-4xl font-semibold bg-yellow-100 text-black p-2 w-full md:w-[400px] flex justify-center py-8 transform -skew-y-3 transition-transform duration-700 ease-in-out hover:skew-y-2">
+        <div className="text-4xl font-semibold bg-blue-100 text-black p-2 w-full md:w-[400px] flex justify-center py-8 transform -skew-y-3 transition-transform duration-700 ease-in-out hover:skew-y-2">
           Streamlined.
         </div>
       </div>
       <div className="w-full md:w-1/2 space-y-8 relative">
         {steps.map((step, index) => (
           <div key={index} className="flex items-start relative">
-            <div className="absolute -left-4 w-16 h-16 bg-orange-500 rounded-full flex flex-col items-center justify-center text-3xl font-bold z-10">
+            <div className="absolute -left-4 w-16 h-16 bg-blue-500 rounded-full flex flex-col items-center justify-center text-3xl font-bold z-10">
               <div>{step.number}</div>
               <div className="font-thin text-xs">Step</div>
             </div>
             <div className="ml-20">
-              <h4 className="text-orange-500 font-bold mb-1">{step.title}</h4>
+              <h4 className="text-blue-500 font-bold mb-1">{step.title}</h4>
               <p className="text-sm text-gray-400">{step.description}</p>
             </div>
           </div>
         ))}
-        <button className="ml-8 mt-4 bg-orange-500 text-white px-6 py-2 rounded-md hover:bg-orange-600 transition-colors">
+        <button className="ml-8 mt-4 bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-green-600 transition-colors">
           Book A Call
         </button>
       </div>

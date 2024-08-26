@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import "./Spinner.css"
 
 const JobDescription = () => {
   const [job, setJob] = useState(null);
@@ -25,7 +26,18 @@ const JobDescription = () => {
     fetchJob();
   }, [id]);
 
-  if (loading) return <div className='text-white'>Loading...</div>;
+  if (loading) return (
+<div className='h-[90vh] flex w-full justify-center items-center'>
+      <div class="spinner">
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+  );
   if (error) return <div className='text-white'>{error}</div>;
   if (!job) return <div className='text-white'>No job found</div>;
 

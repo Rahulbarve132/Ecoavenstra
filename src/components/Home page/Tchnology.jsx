@@ -45,15 +45,8 @@ const data = [
       { subtitle: 'Languages', items: 'Swift, Objective-C, JavaScript, Typescript' },
       { subtitle: 'Frameworks & Tools', items: 'Native iOS, React Native, Expo, Xcode, Push Notifications, Location Services, Google Places API, Apple Health APIs, Biometric Authentication' }
     ]
-  },
-  {
-    title: 'QA',
-    categories: [
-      { subtitle: 'Technologies', items: 'Browserstack, Selenium, Appium, JMeter, Test Driven Development using Jest, Mocha, PHPUnit, WebdriverIO' },
-      { subtitle: 'Technologies', items: 'Github, Gitlab, Bitbucket, Azure Devops, JIRA, Confluence, Trello' },
-      { subtitle: 'Performance Testing & API', items: 'Postman, JMeter' }
-    ]
   }
+ 
 ];
 
 const Tchnology = () => {
