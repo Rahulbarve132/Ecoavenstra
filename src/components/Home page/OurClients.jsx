@@ -10,7 +10,7 @@ const OurClients = () => {
   const clients = [client1, client2, client3, client4, client5];
   
   // Create an array of duplicated logos
-  const duplicatedLogos = [...clients, ...clients, ...clients];
+  const duplicatedLogos = [...clients, ...clients, ...clients, ...clients]; // Increased duplication
 
   return (
     <div className='py-4'>
@@ -18,7 +18,7 @@ const OurClients = () => {
         Our Clients
       </div>
       <div className='logos'>
-        <div className='logos-slide flex'>
+        <div className='logos-slide'>
           {duplicatedLogos.map((client, index) => (
             <img key={index} src={client} alt={`client${index + 1}`} />
           ))}

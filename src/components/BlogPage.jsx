@@ -101,7 +101,7 @@ const BlogPage = () => {
                   {truncateDescription(article.shortDescription, 20)}
                 </div>
                 <div className='mt-4'>
-                  <Link to={`blogs/article/${article.id}`}>
+                  <Link to={`/blog/article/${article.id}`}>
                     <button className='flex justify-center items-center gap-2 text-blue-500 font-semibold'>
                       Read More <FaArrowRight size={12} color='#1d5fd3' />
                     </button>

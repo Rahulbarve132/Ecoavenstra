@@ -24,38 +24,40 @@ const ReadMorePage = () => {
   }, [id]);
 
   if (loading) {
-    return <div className=" py-10 my-10 w-full h-96 bg-[#222222] animate-pulse"></div>;
+    return <div className="py-10 my-10 w-full h-96 bg-[#222222] animate-pulse"></div>;
   }
 
   if (!article) {
-    return (<div className='flex w-full h-[90vh] bg-black justify-center items-center'>
-    <div className="text-white text-xl ">Article not found.</div>
-    </div>);
+    return (
+      <div className='flex w-full h-[90vh] bg-black justify-center items-center'>
+        <div className="text-white text-xl">Article not found.</div>
+      </div>
+    );
   }
 
   return (
-    <div className=' mx-auto px-10 py-8'>
-     
+    <div className='max-w-4xl mx-auto px-10 py-8'>
       {article.coverImage && (
-        <img src={article.coverImage} alt={article.title} className='w-full h-96 object-cover mb-4' />
+        <img src={article.coverImage} alt={article.title} className='w-full h-96 object-cover mb-8 rounded-lg shadow-md' />
       )}
 
-      <div className='text-white py-2 text-4xl font-bold'>{article.title}</div>
-      <div className='flex justify-between user-date'>
-       <div className='flex items-center text-sm text-gray-600 mb-4'>
-        <div className='text-white text-sm font-thin'>{article.user}</div>
-        <div className='mx-2'>•</div>
-        <div className='text-white text-sm font-thin'>{new Date(article.createdAt).toLocaleDateString()}</div>
+      <div className='text-white py-4 text-4xl font-extrabold leading-tight'>{article.title}</div>
+
+      <div className='flex justify-between items-center text-sm text-gray-500 mb-8'>
+        <div className='flex items-center'>
+          <div className='text-white font-medium'>{article.user}</div>
+          <div className='mx-2'>•</div>
+          <div className='text-white'>{new Date(article.createdAt).toLocaleDateString()}</div>
+        </div>
+        {/* <div className='flex space-x-4'>
+          <button className='px-4 py-2 bg-gray-800 rounded-lg text-white hover:bg-gray-700 transition duration-300'>Share</button>
+          <button className='px-4 py-2 bg-gray-800 rounded-lg text-white hover:bg-gray-700 transition duration-300'>More</button>
+        </div> */}
       </div>
-      <div className='flex justify-end mb-4'>
-        <button className='mr-2 text-white'>Share</button>
-        <button className='text-white'>More</button>
-      </div>
-      </div>
-      <p className='text-gray-200 text-xl mb-4'>{article.shortDescription}</p>
-      <div className='text-gray-200 text-xs mb-4' dangerouslySetInnerHTML={{ __html: article.description }}></div>
-      
-      {/* Note: The API response doesn't include top stories, so we've removed that section */}
+
+      <p className='text-gray-400 text-lg mb-6'>{article.shortDescription}</p>
+
+      <div className='prose prose-invert text-gray-300 mb-8' dangerouslySetInnerHTML={{ __html: article.description }}></div>
     </div>
   );
 };

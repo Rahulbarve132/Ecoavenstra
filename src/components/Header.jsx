@@ -20,6 +20,9 @@ const Header = () => {
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
   };
+  const closeSidebar =()=>{
+    setIsOpen(false)
+  }
 
   return (
     <div className='sticky top-0 flex w-full bg-[#000000]  h-14 justify-between items-center z-50'>
@@ -45,7 +48,7 @@ const Header = () => {
               <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M6 18L18 6M6 6l12 12'></path>
             </svg>
           </button>
-          <Navbar toggleSidebar={toggleSidebar} />
+          <Navbar closeSidebar={closeSidebar} toggleSidebar={toggleSidebar} />
         </div>
       </div>
     </div>

@@ -7,31 +7,43 @@ const Services = () => {
       title: "Web Development",
       description:
         "From lightweight MVPs to complex web-based products, our experts can help make your vision a reality, while relieving you of all technical concerns.",
+      backgroundUrl:
+        "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       title: "eCommerce Development",
       description:
         "Our experts can create a modern, intuitive and eco-friendly store to exhibit your products and services to people worldwide.",
+      backgroundUrl:
+        "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       title: "Digital Marketing Services",
       description:
         "We could really assist you in enhancing brand authority and exposure. You are really only one tap away from reaching your intended audience.",
+      backgroundUrl:
+        "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       title: "UI/UX Designing",
       description:
         "Our experts create extraordinary UI/UX design ideas consistent with the latest trends and technologies.",
+      backgroundUrl:
+        "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       title: "Portfolio Design & Development",
       description:
         "We design and develop stunning portfolios that showcase your work professionally, helping you impress clients and employers.",
+      backgroundUrl:
+        "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       title: "Hire Developers",
       description:
         "We have a team of experienced developers. Hire dedicated developers on an hourly or monthly basis.",
+      backgroundUrl:
+        "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
   ];
 
@@ -141,7 +153,9 @@ const Services = () => {
           </video>
         </div>
         <div className="absolute inset-0 flex flex-col justify-center text-white z-10 px-4 md:pl-28">
-          <div className="text-3xl sm:text-5xl md:text-6xl font-bold">Services</div>
+          <div className="text-3xl sm:text-5xl md:text-6xl font-bold">
+            Services
+          </div>
           <div className="w-full md:w-3/4 py-4 text-sm sm:text-lg md:text-xl">
             Leverage our expertise to design, build, and fast-track your
             software lifecycle, utilizing advanced processes for efficiency and
@@ -156,12 +170,12 @@ const Services = () => {
       </div>
 
       {/* Services Section */}
-      <div className="py-16 px-4 sm:px-8 lg:px-16">
+      <div className="py-16  px-4 sm:px-8 lg:px-16">
         <div className="text-white text-3xl sm:text-4xl lg:text-5xl flex justify-center font-bold">
           Our Development & Digital Marketing Services
         </div>
         <div className="flex justify-center py-6">
-          <div className="text-white text-center text-sm sm:text-lg md:text-xl w-full lg:w-10/12">
+          <div className="text-white text-center md:py-6 text-sm  md:text-lg w-full lg:w-10/12">
             Our team delivers custom and universal features for seamless
             customer journeys, ensuring quick, reliable, and secure eCommerce
             web services. With extensive software engineering expertise, we
@@ -174,10 +188,19 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-black text-white border hover:border-blue-900 border-gray-800 p-4 rounded-md transition duration-300 transform hover:scale-105"
+              className="bg-black relative  text-white border hover:border-blue-900 border-gray-800 p-4 rounded-md transition duration-300 transform hover:scale-105"
             >
-              <div className="text-lg sm:text-xl font-bold my-2">{service.title}</div>
-              <div className="py-4 sm:py-6 text-sm sm:text-base">{service.description}</div>
+              <img
+                className="absolute top-0 left-0 right-0  opacity-0 w-full h-full object-cover hover:opacity-60"
+                src={service.backgroundUrl}
+                alt=""
+              />
+              <div className="text-lg   sm:text-xl font-extrabold my-2">
+                {service.title}
+              </div>
+              <div className="py-4 sm:py-6 text-sm sm:text-base">
+                {service.description}
+              </div>
               <div className="flex justify-end px-4 text-blue-500 py-4 text-sm sm:text-base">
                 Know More
               </div>
@@ -196,13 +219,20 @@ const Services = () => {
         </div>
         <div className="bg-black text-white p-4 sm:p-6 flex flex-col lg:flex-row justify-center space-y-6 lg:space-y-0 lg:space-x-6">
           {pricingPlans.map((plan, index) => (
-            <div key={index} className="border border-blue-500 rounded-lg overflow-hidden shadow-lg w-full lg:w-1/3">
+            <div
+              key={index}
+              className="border relative border-blue-500 rounded-lg overflow-hidden shadow-lg w-full lg:w-1/3"
+            >
               <div className="bg-blue-600 text-center p-4">
                 <h2 className="text-xl sm:text-2xl font-bold">{plan.title}</h2>
               </div>
               <div className="p-4 text-center">
-                <p className="text-lg sm:text-xl line-through">{plan.originalPrice}</p>
-                <p className="text-2xl sm:text-3xl font-bold">{plan.discountedPrice}</p>
+                <p className="text-lg sm:text-xl line-through">
+                  {plan.originalPrice}
+                </p>
+                <p className="text-2xl sm:text-3xl font-bold">
+                  {plan.discountedPrice}
+                </p>
                 <p className="text-sm">{plan.gst}</p>
               </div>
               <div className="p-4">
