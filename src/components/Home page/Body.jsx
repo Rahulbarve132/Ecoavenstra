@@ -17,10 +17,10 @@ const Body = () => {
       <OurClients/>
       <WhyChoose/>
       <HomeServices/>
+      <ProcessHome/>
       <Tchnology/>
       <PlansHome/>
       <Recommendation/>
-      <ProcessHome/>
       <Testimonials/>
       <BlogSection/>
     </div>

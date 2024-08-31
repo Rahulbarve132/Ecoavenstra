@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Logo from "../assets/Ecoavenstra_logo.png";
+import Logo from "../assets/Ecoavenstra1_logo.png";
 import Navbar from './Navbar';
 
 const Title = () => {

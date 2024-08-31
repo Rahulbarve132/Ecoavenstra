@@ -58,7 +58,7 @@ const Testimonials = () => {
                         ))}
                     </div>
                 </div>
-                <button onClick={prevTestimonial} className="absolute left-2 top-1/2 transform -translate-y-1/2 text-black p-2 rounded-full shadow-lg">
+                <button onClick={prevTestimonial} className="absolute -left-4 top-1/2 transform -translate-y-1/2 text-black p-2 rounded-full shadow-lg">
                     <GrFormPrevious color='white' size={30} />
                 </button>
                 <button onClick={nextTestimonial} className="absolute right-2 top-1/2 transform -translate-y-1/2  text-black p-2 rounded-full shadow-lg">

@@ -28,16 +28,20 @@ const EmployerForm = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-lg shadow-md">
+    <div className="max-w-lg mx-auto mt-12 p-8 bg-white rounded-lg shadow-lg border border-gray-200">
+      <h2 className="text-2xl font-semibold text-gray-800 mb-6 text-center">Employer Information</h2>
       <form onSubmit={handleSubmit}>
-        <div className="mb-4">
-          <p className="mb-2 text-gray-700">I am looking for</p>
-          <div className="flex space-x-4">
-            <label className="inline-flex items-center">
-              <input type="radio" name="lookingFor" value="recruitment" onChange={handleChange} className="form-radio text-blue-600" />
+        <div className="mb-6">
+          <p className="text-gray-700 font-medium mb-2">I am looking for</p>
+          <div className="flex items-center space-x-6">
+            <label className="flex items-center text-gray-600">
+              <input type="radio" name="lookingFor" value="recruitment" onChange={handleChange} className="form-radio text-blue-600 focus:ring-blue-500" />
               <span className="ml-2">Recruitment solutions</span>
             </label>
-            
+            <label className="flex items-center text-gray-600">
+              <input type="radio" name="lookingFor" value="talent" onChange={handleChange} className="form-radio text-blue-600 focus:ring-blue-500" />
+              <span className="ml-2">Talent acquisition</span>
+            </label>
           </div>
         </div>
 
@@ -46,7 +50,7 @@ const EmployerForm = () => {
           name="name"
           placeholder="Name"
           onChange={handleChange}
-          className="w-full p-2 mb-4 border border-gray-300 rounded"
+          className="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
 
         <input
@@ -54,16 +58,16 @@ const EmployerForm = () => {
           name="contactNumber"
           placeholder="Contact number"
           onChange={handleChange}
-          className="w-full p-2 mb-4 border border-gray-300 rounded"
+          className="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
 
-        <div className="mb-4 flex space-x-4">
-          <label className="inline-flex items-center">
-            <input type="radio" name="companyType" value="company" onChange={handleChange} className="form-radio text-blue-600" />
+        <div className="mb-6 flex items-center space-x-6">
+          <label className="flex items-center text-gray-600">
+            <input type="radio" name="companyType" value="company" onChange={handleChange} className="form-radio text-blue-600 focus:ring-blue-500" />
             <span className="ml-2">Company</span>
           </label>
-          <label className="inline-flex items-center">
-            <input type="radio" name="companyType" value="consultant" onChange={handleChange} className="form-radio text-blue-600" />
+          <label className="flex items-center text-gray-600">
+            <input type="radio" name="companyType" value="consultant" onChange={handleChange} className="form-radio text-blue-600 focus:ring-blue-500" />
             <span className="ml-2">Consultant</span>
           </label>
         </div>
@@ -73,13 +77,13 @@ const EmployerForm = () => {
           name="companyName"
           placeholder="Company/Consultancy name"
           onChange={handleChange}
-          className="w-full p-2 mb-4 border border-gray-300 rounded"
+          className="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
 
         <select
           name="employees"
           onChange={handleChange}
-          className="w-full p-2 mb-4 border border-gray-300 rounded"
+          className="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
           <option value="">No. of employees</option>
           <option value="1-10">1-10</option>
@@ -93,7 +97,7 @@ const EmployerForm = () => {
           name="designationName"
           placeholder="Designation name"
           onChange={handleChange}
-          className="w-full p-2 mb-4 border border-gray-300 rounded"
+          className="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
 
         <input
@@ -101,7 +105,7 @@ const EmployerForm = () => {
           name="emailId"
           placeholder="Email ID"
           onChange={handleChange}
-          className="w-full p-2 mb-4 border border-gray-300 rounded"
+          className="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
 
         <input
@@ -109,14 +113,14 @@ const EmployerForm = () => {
           name="city"
           placeholder="City"
           onChange={handleChange}
-          className="w-full p-2 mb-4 border border-gray-300 rounded"
+          className="w-full p-3 mb-6 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
 
         <button
           type="submit"
-          className="w-full p-2 text-white bg-blue-500 rounded hover:bg-blue-600"
+          className="w-full py-3 text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
-          Get a callback
+          Get a Callback
         </button>
       </form>
     </div>

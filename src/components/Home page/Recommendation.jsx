@@ -2,33 +2,33 @@ import React, { useState, useEffect } from 'react';
 
 const testimonials = [
   {
-    text: "Especially developer team helped me a lot in some customizing topics. Top-Notch! I recommend this theme to everyone ",
-    name: "Giannis Mourelatos",
-    work: "Owner",
+    text: "EcoAvenstra has been instrumental in helping us scale our business operations. Their team's commitment and expertise in web development exceeded our expectations. We were particularly impressed with their ability to understand our unique requirements and deliver a tailored solution. I highly recommend them to anyone looking for quality service and professionalism.",
+    name: "Ravi Kumar",
+    work: "Owner, RK Constructions",
     image: "https://via.placeholder.com/50",
   },
   {
-    text: "The service was exceptional and the team was very helpful. Our project was completed on time and exceeded our expectations.",
-    name: "Sophia Loren",
-    work: "Project Manager",
+    text: "Working with EcoAvenstra was a refreshing experience. Their team demonstrated a deep understanding of our project needs and delivered a high-quality product on time. The communication was seamless, and they were always available to address our concerns. I would not hesitate to work with them again in the future.",
+    name: "Amanda Johnson",
+    work: "Project Manager, GreenTech Innovations",
     image: "https://via.placeholder.com/50",
   },
   {
-    text: "The team at Webvolty IT Solution is highly skilled and delivered a high-quality product. We are very satisfied with their work.",
-    name: "Michael Smith",
-    work: "CEO",
+    text: "The team at EcoAvenstra has truly helped me bring my vision to life. From the initial consultation to the final product, they were professional, creative, and dedicated. Their design and development skills are top-notch, and I’m thrilled with the results. EcoAvenstra has earned my trust, and I look forward to continuing our partnership.",
+    name: "Ankit Mehta",
+    work: "Entrepreneur, Ankit Fashions",
     image: "https://via.placeholder.com/50",
   },
   {
-    text: "Great experience working with the team. They are professional and delivered everything as promised.",
-    name: "Emily Davis",
-    work: "CTO",
+    text: "EcoAvenstra provided exceptional service and delivered a solution that far surpassed our expectations. Their attention to detail, responsiveness, and technical expertise made the entire process smooth and enjoyable. The end product has received rave reviews from our users, and we couldn’t be happier with the outcome.",
+    name: "Sophie Martin",
+    work: "CEO, Blue Horizon Ventures",
     image: "https://via.placeholder.com/50",
   },
   {
-    text: "I highly recommend Webvolty IT Solution. Their expertise and dedication helped us achieve our goals.",
-    name: "John Doe",
-    work: "Entrepreneur",
+    text: "EcoAvenstra’s team is highly skilled and professional. They took the time to understand our complex requirements and delivered a solution that perfectly aligned with our business goals. Their dedication to quality and customer satisfaction is evident in the work they do. I highly recommend EcoAvenstra to anyone looking for a reliable technology partner.",
+    name: "Rajesh Sharma",
+    work: "CTO, Tech Innovators Pvt Ltd",
     image: "https://via.placeholder.com/50",
   },
 ];

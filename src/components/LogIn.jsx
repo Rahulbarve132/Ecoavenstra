@@ -3,10 +3,9 @@ import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { addUser } from "./Redux/userSlice";
 import { toggleLogin } from "./Redux/LoginSlice";
-import { FaRegEye } from "react-icons/fa";
-import { FaRegEyeSlash } from "react-icons/fa";
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
+import { PulseLoader } from "react-spinners"; // Import a loader component
 
 const ToggleSignIn = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -15,6 +14,7 @@ const ToggleSignIn = () => {
   const [forgotPassword, setForgotPassword] = useState(false);
   const [otpSent, setOtpSent] = useState(false);
   const [otpVerified, setOtpVerified] = useState(false);
+  const [loading, setLoading] = useState(false); // Loading state
 
   const dispatch = useDispatch();
   const Email = useRef(null);
@@ -41,6 +41,8 @@ const ToggleSignIn = () => {
   const handleForgotPassword = async () => {
     const email = Email.current.value;
 
+    setLoading(true); // Start loading
+
     try {
       const response = await axios.post(
         "https://ecoavenstra-be.onrender.com/api/v1/user/forgot-password",
@@ -54,12 +56,16 @@ const ToggleSignIn = () => {
     } catch (error) {
       toast.error("Failed to send OTP!");
       console.error("Error:", error.response ? error.response.data : error.message);
+    } finally {
+      setLoading(false); // Stop loading
     }
   };
 
   const handleVerifyOtp = async () => {
     const email = Email.current.value;
     const otp = OTP.current.value;
+
+    setLoading(true); // Start loading
 
     try {
       const response = await axios.post(
@@ -74,6 +80,8 @@ const ToggleSignIn = () => {
     } catch (error) {
       toast.error("Invalid OTP!");
       console.error("Error:", error.response ? error.response.data : error.message);
+    } finally {
+      setLoading(false); // Stop loading
     }
   };
 
@@ -89,20 +97,30 @@ const ToggleSignIn = () => {
 
     const email = Email.current.value;
 
+    setLoading(true); // Start loading
+
     try {
-      await axios.post(
-        "https://ecoavenstra-be.onrender.com/api/v1/user/reset-password",
-        { mail: email, password: newPassword }
+      const response = await axios.put(
+        "https://ecoavenstra-be.onrender.com/api/v1/user/change-password",
+        { email, newPassword, confirmPassword }
       );
 
-      toast.success("Password changed successfully!");
-      setForgotPassword(false);
-      resetForm();
+      if (response.data.success) {
+        toast.success("Password changed successfully!");
+        setForgotPassword(false);
+        resetForm();
+        navigate("/login"); // Redirect to the login page after password change
+      } else {
+        toast.error(response.data.message || "Failed to change password!");
+      }
     } catch (error) {
       toast.error("Failed to change password!");
       console.error("Error:", error.response ? error.response.data : error.message);
+    } finally {
+      setLoading(false); // Stop loading
     }
-  };
+};
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -110,6 +128,8 @@ const ToggleSignIn = () => {
     const password = Password.current.value;
     const name = isRegistering ? Name.current.value : "";
     const role = userToEmployer ? "EMPLOYER" : "USER";
+
+    setLoading(true); // Start loading
 
     try {
       let response;
@@ -143,6 +163,8 @@ const ToggleSignIn = () => {
     } catch (error) {
       toast.error("Invalid Credentials!");
       console.error("Error:", error.response ? error.response.data : error.message);
+    } finally {
+      setLoading(false); // Stop loading
     }
   };
 
@@ -162,7 +184,7 @@ const ToggleSignIn = () => {
       <div className="bg-white shadow-lg rounded-2xl flex max-w-3xl p-8 items-center space-x-6">
         <Toaster />
         <div className="w-full md:w-1/2 px-8">
-          <div className="font-bold text-3xl text-[#002D74]">
+          <div className="font-bold text-3xl py-4 text-[#002D74]">
             {forgotPassword ? "Forgot Password" : isRegistering
               ? userToEmployer
                 ? "Employer Register"
@@ -191,11 +213,11 @@ const ToggleSignIn = () => {
                   placeholder="Enter OTP"
                 />
                 <button
-                  className="bg-[#002D74] text-white py-2 rounded-xl hover:scale-105 duration-300 hover:bg-[#0e4374] font-medium"
+                  className="bg-[#002D74] text-white py-2 rounded-xl hover:scale-105 duration-300 hover:bg-[#0e4374] font-medium flex items-center justify-center"
                   type="button"
                   onClick={handleVerifyOtp}
                 >
-                  Verify OTP
+                  {loading ? <PulseLoader size={8} color="#ffffff" /> : "Verify OTP"}
                 </button>
               </>
             )}
@@ -239,9 +261,8 @@ const ToggleSignIn = () => {
                   >
                     {showPassword ? (
                       <FaRegEyeSlash />
-
                     ) : (
-                        <FaRegEye />
+                      <FaRegEye />
                     )}
                   </svg>
                 </div>
@@ -257,17 +278,20 @@ const ToggleSignIn = () => {
               </>
             ) : (
               <button
-                className="bg-[#002D74] text-white py-2 rounded-xl hover:scale-105 duration-300 hover:bg-[#0e4374] font-medium"
+                className="bg-[#002D74] text-white py-2 rounded-xl hover:scale-105 duration-300 hover:bg-[#0e4374] font-medium flex items-center justify-center"
                 type="button"
                 onClick={handleForgotPassword}
               >
-                Send OTP
+                {loading ? <PulseLoader size={8} color="#ffffff" /> : "Send OTP"}
               </button>
             )}
 
             {(!forgotPassword || otpVerified) && (
-              <button className="bg-[#002D74] text-white py-2 rounded-xl hover:scale-105 duration-300 hover:bg-[#0e4374] font-medium">
-                {forgotPassword ? "Change Password" : isRegistering ? "Sign Up" : "Login"}
+              <button
+                className="bg-[#002D74] text-white py-2 rounded-xl hover:scale-105 duration-300 hover:bg-[#0e4374] font-medium flex items-center justify-center"
+                disabled={loading}
+              >
+                {loading ? <PulseLoader size={8} color="#ffffff" /> : (forgotPassword ? "Change Password" : isRegistering ? "Sign Up" : "Login")}
               </button>
             )}
           </form>
