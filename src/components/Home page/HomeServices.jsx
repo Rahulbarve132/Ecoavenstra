@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import service1 from "../../assets/service1.png";
 import eCommerceDev from "../../assets/eCommerce-Development.png";
 import digital from "../../assets/Digital-Marketing-Services.png";
@@ -7,43 +7,37 @@ import openSource from "../../assets/Open-Source-Development-2.png";
 import HireDevelopers from "../../assets/Hire-Developers.png";
 import { useNavigate } from 'react-router-dom';
 
-const services = [
-  {
-    title: "Web Development",
-    description: "From lightweight MVPs to complex web-based products, our experts can help make your vision a reality, while relieving you of all technical concerns.",
-    icon: service1
-  },
-  {
-    title: "eCommerce Development",
-    description: "Our experts can create a modern, intuitive and eco-friendly store to exhibit your products and services to people worldwide.",
-    icon: eCommerceDev
-  },
-  {
-    title: "Digital Marketing Services",
-    description: "We could really assist you in enhancing brand authority and exposure. You are really only one tap away from reaching your intended audience.",
-    icon: digital
-  },
-  {
-    title: "UI/UX Designing",
-    description: "Our experts create extraordinary UI/UX design ideas consistent with the latest trends and technologies.",
-    icon: UiUx
-  },
-  {
-    title: "Open Source Development",
-    description: "We can turn even the most complicated of your business ideas into reality with advanced open-source development technology.",
-    icon: openSource
-  },
-  {
-    title: "Hire Developers",
-    description: "We have a team of experienced developers. Hire dedicated developers on an hourly or monthly basis.",
-    icon: HireDevelopers
-  }
-];
+// Static icons map
+const icons = {
+  "Web Development": service1,
+  "eCommerce Development": eCommerceDev,
+  "Digital Marketing Services": digital,
+  "UI/UX Designing": UiUx,
+  "Hire Developers": HireDevelopers
+};
 
 const HomeServices = () => {
+  const [servicesData, setServicesData] = useState([]);
   const navigate = useNavigate();
 
-  const Services = () => {
+  // Fetch services from API
+  useEffect(() => {
+    const fetchServices = async () => {
+      try {
+        const response = await fetch('https://ecoavenstra-be.onrender.com/api/v1/admin/services');
+        const data = await response.json();
+        if (data.success) {
+          setServicesData(data.services);
+        }
+      } catch (error) {
+        console.error("Error fetching services:", error);
+      }
+    };
+
+    fetchServices();
+  }, []);
+
+  const handleNavigate = () => {
     navigate("/services");
   };
 
@@ -55,23 +49,23 @@ const HomeServices = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
+          {servicesData.map((service, index) => (
             <div
-              key={index}
+              key={service.id}
               className="flex flex-col items-center p-6 rounded-lg shadow-lg hover:border transition border-transparent bg-[#222222] hover:bg-blue-600"
             >
               <img
-                src={service.icon}
+                src={icons[service.title] || service1} // Default to service1 if title doesn't match
                 alt={`service_${index}`}
                 className="text-4xl h-40 py-3 hover:scale-105 transition-transform duration-300"
               />
               <h3 className="text-2xl font-semibold mb-4">{service.title}</h3>
-              <p>{service.description}</p>
+              <p>{service.shortDescription}</p>
             </div>
           ))}
         </div>
         <button
-          onClick={Services}
+          onClick={handleNavigate}
           className="mt-8 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
         >
           All Services
