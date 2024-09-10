@@ -57,7 +57,7 @@ const Recommendation = () => {
             <h2 className="text-blue-500 text-lg font-bold uppercase">Testimonial</h2>
             <h3 className="text-3xl font-bold text-gray-300 mt-2 mb-4">Trust We Earn</h3>
             <p className="text-gray-200 leading-relaxed">
-              We are working as a leading web-based application and mobile app development in India with 3000+ happy customer's businesses with 100% satisfaction. At Webvolty IT Solution, we offer to you various opportunities to build and care for your start-up or enterprise with advanced technology and we also offer you a broad range of UI/UX development with design services based on business requirements. First, we earn trust in return.
+              We are working as a leading web-based application  in India with 100+ happy customer's businesses with 100% satisfaction. At Ecoavenstra, we offer to you various opportunities to build and care for your start-up or enterprise with advanced technology and we also offer you a broad range of UI/UX development with design services based on business requirements. First, we earn trust in return.
             </p>
           </div>
           <div className="w-full md:w-1/2 bg-white shadow-md rounded-lg p-8 mt-8 md:mt-0">
