@@ -49,7 +49,7 @@ const Footer = () => {
                   <li className="flex items-center">
                     <CiLocationOn className="mr-2" />
                     <span>
-                      Near SP Bungalow, 1st Floor, Sect Building, Barapatthar, Seoni (M.P) - India
+                    Kesri Nagar, Barapatthar, Seoni (M.P) - India
                     </span>
                   </li>
                 </ul>

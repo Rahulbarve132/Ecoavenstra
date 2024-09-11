@@ -50,7 +50,7 @@ const ContactUs = () => {
           Get in touch
         </div>
         <div className='text-gray-300 text-center font-extralight px-4 sm:px-8 md:px-16 lg:px-36 py-6'>
-          Ready to enhance your online presence and drive your business forward? Get in touch with Vlinkt today and experience the power of exceptional web design and development services. Our team of experts is dedicated to creating visually appealing, user-friendly websites that align with your brand and engage your target audience.
+          Ready to enhance your online presence and drive your business forward? Get in touch with Ecoavenstrat today and experience the power of exceptional web design and development services. Our team of experts is dedicated to creating visually appealing, user-friendly websites that align with your brand and engage your target audience.
         </div>
       </div>
       <div className='py-10 w-3/5'>
