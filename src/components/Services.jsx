@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import serviceVideo from "../../src/assets/services_video.mp4";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   const [services, setServices] = useState([]);
@@ -29,7 +30,7 @@ const Services = () => {
       features: [
         "8 pages Website",
         "1 Year Free Domain Name (.com .in .org)",
-        "1 Year Free Hosting (Unlimited Space)",
+        "1 Year Free Hosting",
         "Dynamic Website (Premium Design)",
         "Free SSL Certificates",
         "5 Free Email id",
@@ -53,7 +54,7 @@ const Services = () => {
       features: [
         "12 pages Website",
         "1 Year Free Domain Name (.com .in .org)",
-        "1 Year Free Hosting (Unlimited Space)",
+        "1 Year Free Hosting ",
         "Dynamic Website (Premium Design)",
         "Admin Access",
         "Google Search Console Setup",
@@ -81,7 +82,7 @@ const Services = () => {
       features: [
         "Pages: According to Requirement",
         "1 Year Free Domain Name (.com .in .org)",
-        "1 Year Free Hosting (Unlimited Space)",
+        "1 Year Free Hosting ",
         "Dynamic Website",
         "Admin Access",
         "Lifetime 24/7 Free Hosting Support",
@@ -127,9 +128,11 @@ const Services = () => {
             competitive advantage in your sector.
           </div>
           <div className="pt-4 sm:pt-10">
+            <Link to={"https://wa.me/+919752505639 "} target="_blank">
             <button className="rounded-lg bg-blue-600 py-2 px-6 sm:py-3 sm:px-10">
               Request Free Consultation
             </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -149,7 +152,7 @@ const Services = () => {
             rates, driving significant revenue growth.
           </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-2">
           {services.map((service, index) => (
             <div
               key={index}
@@ -166,9 +169,7 @@ const Services = () => {
               <div className="py-4 sm:py-6 text-sm sm:text-base">
                 {service.shortDescription}
               </div>
-              <div className="flex justify-end px-4 text-blue-500 py-4 text-sm sm:text-base">
-                Know More
-              </div>
+              
             </div>
           ))}
         </div>
@@ -208,11 +209,14 @@ const Services = () => {
                   ))}
                 </ul>
               </div>
+              <Link to={"https://wa.me/+919752505639 "} target="_blank">
               <div className="text-center p-4">
+                
                 <button className="bg-orange-500 text-white py-2 px-4 rounded-md">
                   {plan.buttonText}
                 </button>
-              </div>
+              </div></Link>
+              
             </div>
           ))}
         </div>

@@ -2,12 +2,24 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import "./Spinner.css"
+import Modal from './Home page/Modal';
+import ContactForm from './ContactForm';
 
 const JobDescription = () => {
   const [job, setJob] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const { id } = useParams();
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
   useEffect(() => {
     const fetchJob = async () => {
@@ -72,6 +84,17 @@ const JobDescription = () => {
         <p><strong>Employment Type:</strong> {job.jobType}</p>
         <p><strong>Role Category:</strong> Product Management - Technology</p>
       </div>
+
+      <button 
+            className="text-white py-2 px-6 bg-[#222222] my-5 rounded-lg font-semibold"
+            onClick={openModal}
+          >
+            Apply Here
+          </button>
+
+          <Modal isOpen={isModalOpen} onClose={closeModal}>
+        <ContactForm />
+      </Modal>
     </div>
   );
 };
