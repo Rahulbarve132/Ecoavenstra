@@ -3,6 +3,7 @@ import instagram from "../../assets/instagram.png"
 import facebook from "../../assets/facebook.png"
 import linkedin from "../../assets/linkedIn.png"
 import whatsapp from "../../assets/whatsapp.png"
+import { Link } from "react-router-dom";
 
 const Social = () => {
   return (
@@ -16,9 +17,12 @@ const Social = () => {
       <div className='size-8 object-contain hover:scale-110'>
         <img className='' src={linkedin} alt="linkedin" />
       </div>
+        <Link to={"https://wa.me/+919752505639 "} target="_blank">
       <div className='size-8 object-contain hover:scale-110 '>
         <img className='' src={whatsapp} alt="whatsapp" />
+        
       </div>
+        </Link>
     </div>
   )
 }

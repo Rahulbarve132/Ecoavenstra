@@ -4,22 +4,22 @@ import { GrFormNext } from "react-icons/gr";
 
 const testimonials = [
     {
-      name: "Daniel Lawrence",
-      title: "CEO",
-      image: "src/assets/testimonial 1.jpeg",
-      review: "Latent made our brand stand out. Innovative campaigns and data-driven strategies strengthened our identity. Highly recommended!",
+      name: "Atharv Vibhute",
+      title: "Maneger",
+      image: "src/assets/atharv.jpg",
+      review: "Eeoavenstra made our brand stand out. Innovative campaigns and data-driven strategies strengthened our identity. Highly recommended!",
     },
     {
-      name: "Ken Wickham",
+      name: "Vishal pandey",
       title: "CEO",
       image: "src/assets/testimonial 2.jpg",
-      review: "Latent elevated our brand. Their data-driven approach and innovative campaigns gave us a competitive edge. Extremely satisfied!",
+      review: "Ecoavenstra elevated our brand. Their data-driven approach and innovative campaigns gave us a competitive edge. Extremely satisfied!",
     },
     {
       name: "Dr. Viraj Vaidya",
       title: "Founder",
       image: "src/assets/testimonial 3.jpeg",
-      review: "Working with Latent was a pleasure. Their dedication and tailored solutions led to increased website traffic and conversions.",
+      review: "Working with Ecoavenstra was a pleasure. Their dedication and tailored solutions led to increased website traffic and conversions.",
     },
 ];
 
