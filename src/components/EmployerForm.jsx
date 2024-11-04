@@ -13,18 +13,46 @@ const EmployerForm = () => {
     city: '',
   });
 
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [success, setSuccess] = useState(false);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prevState => ({
       ...prevState,
-      [name]: value
+      [name]: value,
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
-    // Handle form submission logic here
+    setLoading(true);
+    setError(null);
+    setSuccess(false);
+
+    try {
+      const response = await fetch('https://ecoavenstra-be.onrender.com/api/v1/employer/recruit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        console.log('Success:', data);
+        setSuccess(true);
+      } else {
+        const errorData = await response.json();
+        setError(errorData.message || 'Something went wrong');
+      }
+    } catch (error) {
+      setError('Network error: Please try again later.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -116,9 +144,14 @@ const EmployerForm = () => {
           className="w-full p-3 mb-6 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
 
+        {loading && <p className="text-blue-600 text-center mb-4">Submitting...</p>}
+        {error && <p className="text-red-600 text-center mb-4">{error}</p>}
+        {success && <p className="text-green-600 text-center mb-4">Form submitted successfully!</p>}
+
         <button
           type="submit"
           className="w-full py-3 text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
+          disabled={loading}
         >
           Get a Callback
         </button>

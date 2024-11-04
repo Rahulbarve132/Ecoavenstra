@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 import Logo from "../assets/Ecoavenstra1_logo.png";
 import { CiLocationOn, CiPhone, CiMail } from "react-icons/ci";
 
@@ -30,13 +30,19 @@ const Footer = () => {
                 <ul className="text-gray-400">
                   <li className="mb-4 flex items-center">
                     <CiMail className="mr-2" />
-                    <a href="mailto:info@ecoavenstra.com" className="hover:underline">
+                    <a
+                      href="mailto:info@ecoavenstra.com"
+                      className="hover:underline"
+                    >
                       info@ecoavenstra.com
                     </a>
                   </li>
                   <li className="mb-4 flex items-center">
                     <CiMail className="mr-2" />
-                    <a href="mailto:business@ecoavenstra.com" className="hover:underline">
+                    <a
+                      href="mailto:business@ecoavenstra.com"
+                      className="hover:underline"
+                    >
                       business@ecoavenstra.com
                     </a>
                   </li>
@@ -48,16 +54,12 @@ const Footer = () => {
                   </li>
                   <li className="flex items-center">
                     <CiLocationOn className="mr-2" />
-                    <span>
-                    Kesri Nagar, Barapatthar, Seoni (M.P) - India
-                    </span>
+                    <span>Kesri Nagar, Barapatthar, Seoni (M.P) - India</span>
                   </li>
                 </ul>
               </div>
               <div>
-                <h2 className="mb-6 text-sm font-semibold uppercase">
-                  Legal
-                </h2>
+                <h2 className="mb-6 text-sm font-semibold uppercase">Legal</h2>
                 <ul className="text-gray-400">
                   <li className="mb-4">
                     <a href="#" className="hover:underline">
@@ -76,10 +78,11 @@ const Footer = () => {
           <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
           <div className="sm:flex sm:items-center sm:justify-between">
             <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-              © 2024{' '}
+              © 2024{" "}
               <a href="/" className="hover:underline">
                 Ecoavenstra
-              </a>. All Rights Reserved.
+              </a>
+              . All Rights Reserved.
             </span>
             <div className="flex mt-4 sm:justify-center sm:mt-0">
               {/* Social Media Icons can be added here */}
