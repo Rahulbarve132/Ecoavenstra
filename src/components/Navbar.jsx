@@ -5,8 +5,11 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 const Navbar = ({ toggleSidebar }) => {
 
   const token = localStorage.getItem("token");
+  const profileRole = localStorage.getItem("profile_Role");
 
   const [isLogin, setIsLogin] = useState(false);
+  const [employee, setEmployee] = useState(false);
+  const [isEmployer, setIsEmployer] = useState(false);
 
   useEffect(() => {
     if (token) {
@@ -14,7 +17,14 @@ const Navbar = ({ toggleSidebar }) => {
     } else {
       setIsLogin(false);
     }
-  }, [token]);
+
+    // Check if the user role is "EMPLOYER"
+    if (profileRole === "EMPLOYER") {
+      setIsEmployer(true);
+    } else {
+      setIsEmployer(false);
+    }
+  }, [token, profileRole]);
 
   const navigate = useNavigate();
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -38,6 +48,16 @@ const Navbar = ({ toggleSidebar }) => {
     localStorage.removeItem("token");
     localStorage.removeItem("profile_Name");
     localStorage.removeItem("profile_Email");
+    localStorage.removeItem("profile_Role");
+  };
+
+  const handleEmployeeClick = () => {
+    // Toggle the `employee` state and navigate based on its new value
+    setEmployee((prevEmployee) => {
+      const newEmployeeStatus = !prevEmployee;
+      navigate(newEmployeeStatus ? "/employerform" : "/");
+      return newEmployeeStatus;
+    });
   };
 
   return (
@@ -61,12 +81,16 @@ const Navbar = ({ toggleSidebar }) => {
         <li onClick={toggleSidebar}>
           <Link to="/contact-us">Contact Us</Link>
         </li>
-        <Link to="/cart">
-          <li className="listItem hover:scale-105 flex">
-            <AiOutlineShoppingCart size={20} />
-            <p className="relative bottom-2 text-sm font-bold">2</p>
-          </li>
-        </Link>
+
+        {/* Show Employer Form button only if the user is an employer */}
+        {isEmployer && (
+          <button
+            onClick={handleEmployeeClick}
+            className="employer-form flex bg-blue-600 py-1 px-2 rounded-lg text-black font-semibold"
+          >
+            {employee ? "Go to Home" : "Employer Form"}           
+          </button>
+        )}
       </ul>
       {isLogin ? (
         <div className="relative px-4 py-2">
@@ -81,7 +105,7 @@ const Navbar = ({ toggleSidebar }) => {
           {dropdownOpen && (
             <div
               id="userDropdown"
-              className="absolute  left-0 md:left-auto md:right-0 top-full mt-2 z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+              className="absolute left-0 md:left-auto md:right-0 top-full mt-2 z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
               style={{ maxWidth: 'calc(100vw - 1rem)' }} // Ensures dropdown width is within viewport
             >
               <div className="px-4 py-3 text-sm text-gray-900 dark:text-white">

@@ -145,10 +145,13 @@ const ToggleSignIn = () => {
         );
       }
 
+      console.log(response);
+
       if (response.data.token) {
         localStorage.setItem("token", response.data.token);
         localStorage.setItem("profile_Name", response.data.user.name);
         localStorage.setItem("profile_Email", response.data.user.email);
+        localStorage.setItem("profile_Role", response.data.user.role);
       }
 
       if (userToEmployer) {
@@ -215,7 +218,7 @@ const ToggleSignIn = () => {
                 <button
                   className="bg-[#002D74] text-white py-2 rounded-xl hover:scale-105 duration-300 hover:bg-[#0e4374] font-medium flex items-center justify-center"
                   type="button"
-                  onClick={handleVerifyOtp}
+                   onClick={handleVerifyOtp}
                 >
                   {loading ? <PulseLoader size={8} color="#ffffff" /> : "Verify OTP"}
                 </button>

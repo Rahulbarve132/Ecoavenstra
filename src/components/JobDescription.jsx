@@ -80,9 +80,7 @@ const JobDescription = () => {
         <h3 className="font-semibold mb-2">Additional Information:</h3>
         <p><strong>Role:</strong> {job.jobTitle}</p>
         <p><strong>Industry Type:</strong> FinTech / Payments</p>
-        <p><strong>Department:</strong> Product Management</p>
         <p><strong>Employment Type:</strong> {job.jobType}</p>
-        <p><strong>Role Category:</strong> Product Management - Technology</p>
       </div>
 
       <button 

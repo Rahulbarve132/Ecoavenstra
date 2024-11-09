@@ -15,8 +15,8 @@ const Body = () => {
     <div>
       <LandingPage/>
       <OurClients/>
-      <WhyChoose/>
       <HomeServices/>
+      <WhyChoose/>
       <ProcessHome/>
       <Tchnology/>
       <PlansHome/>
