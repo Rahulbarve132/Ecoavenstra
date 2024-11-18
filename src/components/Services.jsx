@@ -155,22 +155,25 @@ const Services = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-2">
           {services.map((service, index) => (
             <div
-              key={index}
-              className="bg-black relative text-white border hover:border-blue-900 border-gray-800 p-4 rounded-md transition duration-300 transform hover:scale-105"
-            >
-              <img
-                className="absolute top-0 left-0 right-0 opacity-0 w-full h-full object-cover hover:opacity-60"
-                src="/src/assets/bg-services.jpg"
-                alt={service.title}
-              />
-              <div className="text-lg sm:text-xl font-extrabold my-2">
+            key={index}
+            className="bg-black relative text-white border hover:border-blue-900 border-gray-800 p-4 rounded-md transition duration-300 transform hover:scale-105 group"
+          >
+            <img
+              className="absolute top-0 left-0 right-0 w-full h-full object-cover opacity-20 group-hover:opacity-60 z-10"
+              src="https://images.pexels.com/photos/32997/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              alt={service.title}
+            />
+            <div className="relative z-20">
+              <div className="text-lg sm:text-xl font-extrabold my-2 group-hover:text-white">
                 {service.title}
               </div>
-              <div className="py-4 sm:py-6 text-sm sm:text-base">
+              <div className="py-4 sm:py-6 text-sm sm:text-base group-hover:text-white">
                 {service.shortDescription}
               </div>
-              
             </div>
+          </div>
+          
+          
           ))}
         </div>
       </div>
