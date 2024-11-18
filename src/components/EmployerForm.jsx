@@ -2,15 +2,10 @@ import React, { useState } from 'react';
 
 const EmployerForm = () => {
   const [formData, setFormData] = useState({
-    lookingFor: '',
     name: '',
-    contactNumber: '',
+    email: '',
     companyType: '',
     companyName: '',
-    employees: '',
-    designationName: '',
-    emailId: '',
-    city: '',
     jobTitle: '',
     salaryRange: '',
     category: '',
@@ -18,6 +13,7 @@ const EmployerForm = () => {
     jobType: '',
     jobLocation: '',
     jobDescription: '',
+    contactNumber: '',
     openTill: '',
   });
 
@@ -74,15 +70,15 @@ const EmployerForm = () => {
           onChange={handleChange}
           className="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
-        
+
         <input
-          type="tel"
-          name="contactNumber"
-          placeholder="Contact number"
+          type="email"
+          name="email"
+          placeholder="Email"
           onChange={handleChange}
           className="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
-        
+
         <input
           type="text"
           name="companyType"
@@ -90,15 +86,15 @@ const EmployerForm = () => {
           onChange={handleChange}
           className="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
-        
+
         <input
           type="text"
           name="companyName"
-          placeholder="Company/Consultancy name"
+          placeholder="Company Name"
           onChange={handleChange}
           className="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
-        
+
         <input
           type="text"
           name="jobTitle"
@@ -118,7 +114,7 @@ const EmployerForm = () => {
         <input
           type="text"
           name="category"
-          placeholder="Job Category"
+          placeholder="Category"
           onChange={handleChange}
           className="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
@@ -158,6 +154,15 @@ const EmployerForm = () => {
           className="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
           rows="3"
         />
+
+        <input
+          type="tel"
+          name="contactNumber"
+          placeholder="Contact Number"
+          onChange={handleChange}
+          className="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+
         <div className='font-semibold p-2'>
           Open Till
         </div>

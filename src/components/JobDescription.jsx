@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import "./Spinner.css"
 import Modal from './Home page/Modal';
-import ContactForm from './ContactForm';
+import ApplyJobs from './ApplyJobs';
 
 const JobDescription = () => {
   const [job, setJob] = useState(null);
@@ -91,7 +91,7 @@ const JobDescription = () => {
           </button>
 
           <Modal isOpen={isModalOpen} onClose={closeModal}>
-        <ContactForm />
+        <ApplyJobs/>
       </Modal>
     </div>
   );

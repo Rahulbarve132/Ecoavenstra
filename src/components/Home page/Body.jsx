@@ -3,12 +3,12 @@ import LandingPage from './LandingPage'
 import OurClients from './OurClients'
 import WhyChoose from './WhyChoose'
 import Tchnology from './Tchnology'
-import Testimonials from './Testimonials'
 import Recommendation from './Recommendation'
 import BlogSection from './BlogSection'
 import HomeServices from './HomeServices'
 import ProcessHome from './ProcessHome'
 import PlansHome from './PlansHome'
+import Work from './Work'
 
 const Body = () => {
   return (
@@ -21,7 +21,7 @@ const Body = () => {
       <Tchnology/>
       <PlansHome/>
       <Recommendation/>
-      <Testimonials/>
+      <Work/>
       <BlogSection/>
     </div>
   )
