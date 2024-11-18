@@ -66,9 +66,9 @@ const Work = () => {
                 />
                 </div>
                 
-                <div className="mt-4 bg-black">
+                <div className="mt-4 bg-black w-[1000px]">
   <h3 className="text-2xl font-semibold text-blue-400">{project.title}</h3>
-  <p className="text-gray-300 mt-2 break-words">{project.description}</p>
+  <p className="text-gray-300 mt-2  break-words">{project.description}</p>
 </div>
               </div>
             ))}
