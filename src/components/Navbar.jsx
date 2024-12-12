@@ -73,7 +73,7 @@ const Navbar = ({ toggleSidebar }) => {
           <Link to="/services">Services</Link>
         </li>
         <li onClick={toggleSidebar}>
-          <Link to="/blog">Blog</Link>
+          <Link to="/blog">Articles</Link>
         </li>
         <li onClick={toggleSidebar}>
           <Link to="/jobs">Jobs</Link>

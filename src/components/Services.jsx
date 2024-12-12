@@ -215,7 +215,7 @@ const Services = () => {
               <Link to={"https://wa.me/+919752505639 "} target="_blank">
               <div className="text-center p-4">
                 
-                <button className="bg-orange-500 text-white py-2 px-4 rounded-md">
+                <button className="bg-blue-600  hover:bg-green-600 text-white py-2 px-4 rounded-md">
                   {plan.buttonText}
                 </button>
               </div></Link>

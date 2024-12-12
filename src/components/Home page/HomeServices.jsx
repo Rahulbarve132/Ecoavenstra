@@ -52,7 +52,7 @@ const HomeServices = () => {
           {servicesData.map((service, index) => (
             <div
               key={service.id}
-              className=" flex flex-col items-center p-6 rounded-lg shadow-lg hover:border transition border-transparent bg-[#222222] hover:bg-blue-600"
+              className=" flex flex-col items-center p-6 rounded-lg shadow-lg hover:border transition border-transparent bg-blue-600  hover:bg-green-600"
             >
               <img
                 src={icons[service.title] || service1} // Default to service1 if title doesn't match
