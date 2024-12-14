@@ -7,7 +7,11 @@ export default {
     
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Lato', 'sans-serif'], // Replace 'Poppins' with your desired font
+      },
+    },
   },
   plugins: [],
 }

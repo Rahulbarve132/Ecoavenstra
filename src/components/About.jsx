@@ -1,70 +1,139 @@
-import React from 'react';
-import aboutImage from '../assets/login_sky.jpg'; // Ensure this is the correct path
-import HomeServices from '../components/Home page/HomeServices'
+import React from "react";
+
+const stats = [
+  { value: "3+", label: "Year In Business" },
+  { value: "35+", label: "Happy Clients" },
+  { value: "40+", label: "Projects Completed" },
+  { value: "30k+", label: "Line of Code" },
+];
+
 const About = () => {
   return (
-    <section className="bg-black py-12">
-      <div className="container mx-auto px-6  lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
-        
-        {/* Left Content Section */}
-        <div className="flex flex-col justify-center">
-          <h2 className="text-lg text-green-400 font-semibold mb-4">About Us</h2>
-          <h1 className="text-4xl font-bold text-white mb-6">
-            Our Mission to Revolutionize Tech Dropshipping
-          </h1>
-          <p className="text-lg text-gray-300 mb-4">
-            EcoAvenstra was created to offer a seamless, eco-conscious tech dropshipping solution.
-            Our goal is to connect tech enthusiasts, brands, and sellers globally while reducing environmental impact.
-            We stand for:
-          </p>
-          
-          {/* Core Values */}
-          <ul className="list-none space-y-4 mb-6">
-            <li className="flex items-center">
-              <svg className="w-6 h-6 text-green-400 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span className="text-gray-200">Sustainability</span>
-            </li>
-            <li className="flex items-center">
-              <svg className="w-6 h-6 text-green-400 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span className="text-gray-200">Innovation</span>
-            </li>
-            <li className="flex items-center">
-              <svg className="w-6 h-6 text-green-400 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span className="text-gray-200">Customer Focus</span>
-            </li>
-            <li className="flex items-center">
-              <svg className="w-6 h-6 text-green-400 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span className="text-gray-200">Global Reach</span>
-            </li>
-          </ul>
-
-          <a
-            href="#"
-            className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-500 transition duration-300 transform hover:scale-105"
-          >
-            Discover More
-          </a>
-        </div>
-
-        {/* Right Image Section */}
-        <div className="flex items-center justify-center h-screen">
-          <img
-            src={aboutImage} // Your uploaded image here
-            alt="About EcoAvenstra"
-            className="w-full rounded-lg shadow-lg h-screen"
+    <div className="min-h-screen bg-black text-gray-800">
+      {/* Header Section */}
+      <div className="bg-black h-auto md:h-96 text-white py-8 flex justify-center relative">
+        <div className="absolute inset-0">
+          <img 
+            src="src/assets/bg-about.png" 
+            alt="" 
+            className="w-full h-full object-cover"
           />
         </div>
+        <div className="container mx-auto px-4 justify-center flex flex-col items-center text-center relative z-10">
+          <h1 className="text-3xl md:text-4xl font-bold mb-4 flex items-center gap-3">
+            About <span className="text-blue-600">Us</span>
+          </h1>
+          <p className="text-base md:text-lg max-w-2xl">
+            Unlock the potential of your concept, enterprise, aspiration, and bring it to
+          </p>
+        </div>
       </div>
-     <HomeServices/> 
-    </section>
+
+      {/* Main Content */}
+      <main className="container mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        {/* Text Section */}
+        <div className="order-2 md:order-1">
+          <h2 className="text-2xl md:text-3xl text-white font-semibold mb-4 flex items-center gap-2">
+            Why <span className="text-blue-700">Ecoavenstra</span>
+          </h2>
+          <p className="text-[#868686] leading-relaxed mb-6">
+            Ecoavenstra stands out as the ideal partner for your digital journey, offering a comprehensive range of web solutions tailored to your business needs. From web design and development to e-commerce solutions, mobile apps, and digital marketing, we provide everything you need to establish a strong online presence. What sets us apart is our commitment to delivering affordable excellence—visually stunning and user-friendly websites that align with your brand identity, all without exceeding your budget. Backed by a team of skilled professionals, we focus on empowering businesses with innovative strategies and a customer-centric approach to unlock their full potential in the digital world. With a proven track record as a leading web design company in India, Ecoavenstra ensures end-to-end support, guiding you from concept to execution. Trust us to transform your online presence with the perfect blend of creativity, technology, and strategy.
+          </p>
+          <button className="w-full md:w-auto mt-6 bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition duration-300">
+            Learn More
+          </button>
+        </div>
+
+        {/* Image Section */}
+        <div className="order-1 md:order-2 w-full max-w-sm mx-auto flex flex-col shadow-lg shadow-[#5e84bd] rounded-3xl bg-[#161616] gap-4 py-10">
+          <div className="text-black font-bold text-xl bg-blue-600 px-2 rounded-md self-center">
+            Our Brand Identities
+          </div>
+          <div className="w-48 md:w-60 mx-auto">
+            <img 
+              src="src/assets/Ecoavenstra_logo.png" 
+              alt="Ecoavenstra Logo" 
+              className="w-full h-auto"
+            />
+          </div>
+          <div className="w-48 md:w-60 mx-auto">
+            <img 
+              src="src/assets/Ecoavenstra1_logo.png" 
+              alt="Ecoavenstra Secondary Logo" 
+              className="w-full h-auto"
+            />
+          </div>
+          <div className="text-white font-bold text-center">By ECOAVENSTRA PVT.LTD.</div>
+        </div>
+      </main>
+
+      {/* Number Section */}
+      <div className="bg-black/90 rounded-2xl p-4 md:p-8 mx-4 md:mx-20">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+          {stats.map((stat, index) => (
+            <div key={index} className="py-4">
+              <div className="text-3xl md:text-5xl font-bold text-white mb-2">
+                {stat.value}
+              </div>
+              <div className="text-sm md:text-lg text-gray-200">
+                {stat.label}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Feature Section */}
+      <div className="bg-[#101010] rounded-3xl mx-4 md:mx-20 p-6 md:p-12 my-14">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="relative aspect-square w-full max-w-2xl mx-auto">
+            <img
+              src="src/assets/office-img.png"
+              alt="Isometric illustration of office workspace"
+              className="object-contain w-full h-auto"
+            />
+          </div>
+          <div className="space-y-8">
+            <section className="space-y-4">
+              <h2 className="text-2xl md:text-4xl font-bold text-white">Mission</h2>
+              <p className="text-gray-400 text-base md:text-lg leading-relaxed">
+                At Ecoavenstra, our mission is to help businesses of all sizes establish a strong and effective online presence through our innovative web development solutions. We aim to deliver customized and high-quality digital products that meet the specific needs of each client, while also providing excellent customer service and support.
+              </p>
+            </section>
+
+            <section className="space-y-4">
+              <h2 className="text-2xl md:text-4xl font-bold text-white">Vision</h2>
+              <p className="text-gray-400 text-base md:text-lg leading-relaxed">
+                Our vision at Ecoavenstra is to become a leading web development company that is recognized for our expertise, innovation, and commitment to client success. We strive to empower businesses with the tools they need to thrive in the digital age, while also forming a collaborative and growth-oriented company culture that values creativity, integrity, and excellence.
+              </p>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      {/* Consultation Section */}
+      <div className="bg-[#151515] w-full max-w-6xl mx-4 md:mx-auto rounded-3xl p-6 md:p-8">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="text-center md:text-left space-y-2 flex-grow">
+            <h2 className="text-2xl md:text-4xl font-bold text-white">
+              Get Free Consultation Now!
+            </h2>
+            <p className="text-gray-400 text-base md:text-lg">
+              Let's create a powerful website that grows with your business.
+            </p>
+          </div>
+          <div>
+            <a href="tel:+919752505639" className="block">
+              <button
+                className="text-white border border-white hover:bg-white hover:text-black transition-colors rounded-full text-base md:text-lg px-4 md:px-6 py-2 md:py-3"
+              >
+                Consult Now
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 

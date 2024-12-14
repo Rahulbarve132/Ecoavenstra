@@ -62,7 +62,7 @@ const Navbar = ({ toggleSidebar }) => {
 
   return (
     <div className="flex flex-col md:flex-row items-start md:items-center">
-      <ul className="flex flex-col md:flex-row text-white text-sm gap-4 md:gap-8 font-thin mx-6">
+      <ul className="flex flex-col md:flex-row text-white text-sm gap-4 md:gap-8 font-normal mx-6">
         <li onClick={toggleSidebar}>
           <Link to="/">Home</Link>
         </li>
