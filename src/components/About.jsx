@@ -116,27 +116,33 @@ const About = () => {
       </div>
 
       {/* Consultation Section */}
-      <div className="bg-[#151515] w-full max-w-6xl  md:mx-auto rounded-3xl p-6 md:p-8">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="text-center md:text-left space-y-2 flex-grow">
-            <h2 className="text-2xl md:text-4xl font-bold text-white">
-              Get Free Consultation Now!
-            </h2>
-            <p className="text-gray-400 text-base md:text-lg">
-              Let's create a powerful website that grows with your business.
-            </p>
-          </div>
-          <div>
-            <a href="tel:+919752505639" className="block">
-              <button
-                className="text-white border border-white hover:bg-white hover:text-black transition-colors rounded-full text-base md:text-lg px-4 md:px-6 py-2 md:py-3"
-              >
-                Consult Now
-              </button>
-            </a>
-          </div>
-        </div>
-      </div>
+      <div className="px-4 md:px-16">
+      <div className="bg-[#151515] w-full rounded-3xl p-6 md:p-8">
+  <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+    {/* Text Section */}
+    <div className="text-center md:text-left space-y-4 flex-grow">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">
+        Get Free Consultation Now!
+      </h2>
+      <p className="text-gray-400 text-sm sm:text-base md:text-lg">
+        Let's create a powerful website that grows with your business.
+      </p>
+    </div>
+
+    {/* Button Section */}
+    <div className="flex-shrink-0">
+      <a href="tel:+919752505639" className="block">
+        <button
+          className="text-white border bg-[#1c3987] border-white hover:bg-green-600 hover:text-black transition-colors rounded-full text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4"
+        >
+          Consult Now
+        </button>
+      </a>
+    </div>
+  </div>
+</div>
+</div>
+
     </div>
   );
 };

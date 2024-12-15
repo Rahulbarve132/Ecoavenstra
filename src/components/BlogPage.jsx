@@ -66,7 +66,7 @@ const BlogPage = () => {
           </div>
           <div className='another-half w-full md:w-1/2 flex flex-col md:px-10'>
             <div className='upper-circle bg-gray-600 flex py-1 text-xs justify-center items-center w-fit px-1 gap-2 rounded-full'>
-              <div className='bg-[#1c3987] flex justify-center items-center px-2 py-1 font-semibold rounded-full'>News !</div>
+              <div className='bg-[#1c3987] flex justify-center text-white items-center px-2 py-1 font-semibold rounded-full'>News !</div>
               <div className='text-white font-semibold'>Read continue</div>
             </div>
             <div className='big-heading text-white py-4 text-3xl md:text-4xl lg:text-5xl'>

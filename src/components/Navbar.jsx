@@ -86,7 +86,7 @@ const Navbar = ({ toggleSidebar }) => {
         {isEmployer && (
           <button
             onClick={handleEmployeeClick}
-            className="employer-form flex bg-[#1c3987] py-1 px-2 rounded-lg text-black font-semibold"
+            className="employer-form flex bg-[#1c3987] py-1 px-2 rounded-lg text-white font-semibold"
           >
             {employee ? "Go to Home" : "Employer Form"}           
           </button>
