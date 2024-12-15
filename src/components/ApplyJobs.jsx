@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 
-const ApplyJobs = () => {
+const ApplyJobs = ({jobId}) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -10,6 +10,7 @@ const ApplyJobs = () => {
     skills: "",
     experience: "",
     resume: null,
+    jobId : jobId
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -47,6 +48,7 @@ const ApplyJobs = () => {
     apiFormData.append("skills", formData.skills);
     apiFormData.append("experience", formData.experience);
     apiFormData.append("resume", formData.resume);
+    apiFormData.append("jobId", formData.jobId);
 
     try {
       const response = await axios.post(
@@ -71,6 +73,7 @@ const ApplyJobs = () => {
           skills: "",
           experience: "",
           resume: null,
+          jobId : jobId
         });
       } else {
         toast.error("Failed to submit the application. Please try again.");

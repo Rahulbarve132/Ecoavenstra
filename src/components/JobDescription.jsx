@@ -10,6 +10,7 @@ const JobDescription = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const { id } = useParams();
+  const [jobId, setJobId] = useState(null);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -27,6 +28,8 @@ const JobDescription = () => {
         setLoading(true);
         const response = await axios.get(`https://ecoavenstra-be.onrender.com/api/v1/admin/jobs/${id}`);
         setJob(response.data.job);
+        console.log(response.data.job.id);
+        setJobId(response?.data?.job?.id)
         setLoading(false);
       } catch (error) {
         console.error('Error fetching job:', error);
@@ -91,7 +94,7 @@ const JobDescription = () => {
           </button>
 
           <Modal isOpen={isModalOpen} onClose={closeModal}>
-        <ApplyJobs/>
+        <ApplyJobs jobId = {jobId}/>
       </Modal>
     </div>
   );
