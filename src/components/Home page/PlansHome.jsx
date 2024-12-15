@@ -12,11 +12,11 @@ const PlansHome = () => {
 
   return (
     <div className="bg-black text-white p-4 md:p-6 md:pb-20" >
-      <div className='flex justify-center py-4 md:py-6 font-semibold text-3xl md:text-5xl'>
+      <div className=' flex justify-center py-4 md:py-6 font-semibold text-3xl md:text-5xl'>
         Our Plans
       </div>
-      <div className="overflow-x-auto">
-        <table className="w-full border-collapse text-sm md:text-base">
+      <div className=" hidden md:flex overflow-x-auto ">
+        <table className= " w-full border-collapse text-sm md:text-base">
           <thead>
             <tr>
               <th className="p-2 md:p-4 border-b border-gray-700"></th>

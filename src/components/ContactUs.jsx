@@ -53,7 +53,7 @@ const ContactUs = () => {
           Ready to enhance your online presence and drive your business forward? Get in touch with Ecoavenstra today and experience the power of exceptional web design and development services. Our team of experts is dedicated to creating visually appealing, user-friendly websites that align with your brand and engage your target audience.
         </div>
       </div>
-      <div className='py-10 w-3/5'>
+      <div className='py-10 px-2 w-full md:w-3/5'>
         <ContactForm />
       </div>
       <div className='flex flex-col md:flex-row justify-center items-center gap-14 py-10'>
