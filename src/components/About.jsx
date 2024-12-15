@@ -1,4 +1,8 @@
 import React from "react";
+import bgimage from "/src/assets/bg-about.png";
+import logo1 from "/src/assets/Ecoavenstra_logo.png";
+import logo2 from "/src/assets/Ecoavenstra1_logo.png";
+import office from "/src/assets/office-img.png";
 
 const stats = [
   { value: "3+", label: "Year In Business" },
@@ -14,7 +18,7 @@ const About = () => {
       <div className="bg-black h-auto md:h-96 text-white py-8 flex justify-center relative">
         <div className="absolute inset-0">
           <img 
-            src="/src/assets/bg-about.png" 
+            src={bgimage} 
             alt="" 
             className="w-full h-full object-cover"
           />
@@ -51,14 +55,14 @@ const About = () => {
           </div>
           <div className="w-48 md:w-60 mx-auto">
             <img 
-              src="src/assets/Ecoavenstra_logo.png" 
+              src= {logo1}
               alt="Ecoavenstra Logo" 
               className="w-full h-auto"
             />
           </div>
           <div className="w-48 md:w-60 mx-auto">
             <img 
-              src="src/assets/Ecoavenstra1_logo.png" 
+              src= {logo2}
               alt="Ecoavenstra Secondary Logo" 
               className="w-full h-auto"
             />
@@ -88,7 +92,7 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="relative aspect-square w-full max-w-2xl mx-auto">
             <img
-              src="src/assets/office-img.png"
+              src={office}
               alt="Isometric illustration of office workspace"
               className="object-contain w-full h-auto"
             />

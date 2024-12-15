@@ -4,24 +4,27 @@ import { Link } from "react-router-dom";
 import "./Spinner.css";
 import { BsBuilding } from "react-icons/bs";
 import { FaFilter, FaTimes } from "react-icons/fa";
+import job1 from "/src/assets/1st image.png";
+import job2 from "/src/assets/2ed image.webp";
+import job3 from "/src/assets/3ed image.webp";
 
 const categories = [
   {
     id: 1,
     title: "Full Time Jobs",
-    image: "src/assets/1st image.png",
+    image: job1,
     trending: "TRENDING AT #1",
   },
   {
     id: 2,
     title: "Internship⠀⠀",
-    image: "src/assets/2ed image.webp",
+    image:job2 ,
     trending: "TRENDING AT #2",
   },
   {
     id: 3,
     title: "Part Time Jobs",
-    image: "src/assets/3ed image.webp",
+    image:  job3 ,
     trending: "TRENDING AT #3",
   },
 ];
@@ -91,10 +94,11 @@ const Jobs = () => {
           ? job.jobLocation.toLowerCase().includes(location.toLowerCase())
           : true;
 
-        const matchesJobTypes =
-          (!jobTypes.fullTime || job.jobType.toLowerCase() === "full-time") &&
-          (!jobTypes.partTime || job.jobType.toLowerCase() === "part-time") &&
-          (!jobTypes.Internship || job.jobType.toLowerCase() === "internship");
+          const matchesJobTypes = 
+          (jobTypes.fullTime && job.jobType.toLowerCase() === "full-time") ||
+          (jobTypes.partTime && job.jobType.toLowerCase() === "part-time") ||
+          (jobTypes.Internship && job.jobType.toLowerCase() === "internship");
+        
 
         return matchesProfile && matchesLocation && matchesJobTypes;
       });
@@ -330,7 +334,7 @@ const Jobs = () => {
                     </div>
                   </div>
                   <Link to={`/jobs/job/${job.id}`}>
-                    <button className="mt-2 border border-white px-2 rounded-lg text-white hover:bg-gray-100 text-sm py-1">
+                    <button className="mt-2 border border-white px-2 rounded-lg text-white hover:bg-blue-900 text-sm py-1">
                       Apply Now
                     </button>
                   </Link>

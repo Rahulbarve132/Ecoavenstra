@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import Ecoavenstra from "/src/assets/Ecoavenstra.png";
+import Blogspot from "/src/assets/blogspot.png";
+import Urbn from "/src/assets/Urbn.png";
 
 const Work = () => {
   const projects = [
@@ -7,21 +10,21 @@ const Work = () => {
       title: "Ecoavenstra Website",
       description:
         "A full-stack web application focused on sustainable solutions, developed using React, Node.js, and Tailwind CSS.",
-      image: "src/assets/Ecoavenstra.png", // Replace with your image path
+      image: Ecoavenstra, // Replace with your image path
     },
     {
       id: 2,
       title: "Blogspot",
       description:
         "Blogspot is a modern blogging platform built with React, Node.js, and Express.js, offering seamless content creation and user-friendly interfaces. It combines performance and scalability to provide a smooth experience for bloggers and readers alike.",
-      image: "src/assets/blogspot.png", // Replace with your image path
+      image: Blogspot, // Replace with your image path
     },
     {
       id: 3,
       title: "Urbn - Home rental services",
       description:
         "Urbn is a modern home rental platform built with React, Node.js, and Express.js, providing a seamless and user-friendly experience for property owners and renters. It offers easy browsing, booking, and management of rental properties in an intuitive and responsive interface.",
-      image: "src/assets/Urbn.png", // Replace with your image path
+      image: Urbn, // Replace with your image path
     },
   ];
 
