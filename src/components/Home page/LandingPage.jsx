@@ -52,9 +52,9 @@ const LandingPage = () => {
           </ul>
         </div>
 
-        <div className="py-4 sm:py-[6%] button text-center">
+        <div className="py-4 sm:pb-[10%] button text-center">
           <button
-            className="bg-blue-700 text-white font-bold text-lg py-2 px-6 sm:px-10 rounded-full"
+            className="bg-blue-700 hover:bg-green-600 text-white font-bold text-lg py-2 px-6 sm:px-10 rounded-full"
             onClick={openModal}
           >
             Get in Touch
