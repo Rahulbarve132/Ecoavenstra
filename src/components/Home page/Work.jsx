@@ -79,13 +79,13 @@ const Work = () => {
           {/* Navigation */}
           <button
             onClick={handlePrev}
-            className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-700 text-white p-3 rounded-full shadow-lg hover:bg-blue-600"
+            className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-700 text-white p-3 rounded-full shadow-lg hover:bg-[#1c3987]"
           >
             ❮
           </button>
           <button
             onClick={handleNext}
-            className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-700 text-white p-3 rounded-full shadow-lg hover:bg-blue-600"
+            className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-700 text-white p-3 rounded-full shadow-lg hover:bg-[#1c3987]"
           >
             ❯
           </button>

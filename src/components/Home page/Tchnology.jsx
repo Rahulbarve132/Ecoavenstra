@@ -58,7 +58,7 @@ const Tchnology = () => {
       <div data-aos="fade-up" className='text-white text-3xl sm:text-5xl flex justify-center font-semibold pt-4 pb-10 sm:pb-20'>Technologies We Master</div>
       <div className='flex flex-wrap justify-center'>
         {data.map((item, index) => (
-          <div key={index} data-aos="flip-right"  className=' box h-[450px] p-8 py-4 sm:w-1/4 w-full font-semibold bg-blue-600  hover:bg-green-600 flex flex-col rounded-xl mx-4 mb-8'>
+          <div key={index} data-aos="flip-right"  className=' box h-[450px] p-8 py-4 sm:w-1/4 w-full font-semibold bg-[#1c3987]  hover:bg-green-600 flex flex-col rounded-xl mx-4 mb-8'>
             
             <div className='flex py-6 text-white text-4xl'>{item.title}</div>
             {item.categories.map((category, idx) => (

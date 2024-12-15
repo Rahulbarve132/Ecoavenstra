@@ -129,7 +129,7 @@ const Services = () => {
           </div>
           <div className="pt-4 sm:pt-10">
             <Link to={"https://wa.me/+919752505639 "} target="_blank">
-            <button className="rounded-lg bg-blue-600 py-2 px-6 sm:py-3 sm:px-10">
+            <button className="rounded-lg bg-[#1c3987] py-2 px-6 sm:py-3 sm:px-10">
               Request Free Consultation
             </button>
             </Link>
@@ -192,7 +192,7 @@ const Services = () => {
               key={index}
               className="border relative border-blue-500 rounded-lg overflow-hidden shadow-lg w-full lg:w-1/3"
             >
-              <div className="bg-blue-600 text-center p-4">
+              <div className="bg-[#1c3987] text-center p-4">
                 <h2 className="text-xl sm:text-2xl font-bold">{plan.title}</h2>
               </div>
               <div className="p-4 text-center">
@@ -215,7 +215,7 @@ const Services = () => {
               <Link to={"https://wa.me/+919752505639 "} target="_blank">
               <div className="text-center p-4">
                 
-                <button className="bg-blue-600  hover:bg-green-600 text-white py-2 px-4 rounded-md">
+                <button className="bg-[#1c3987]  hover:bg-green-600 text-white py-2 px-4 rounded-md">
                   {plan.buttonText}
                 </button>
               </div></Link>

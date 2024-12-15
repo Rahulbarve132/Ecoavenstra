@@ -52,7 +52,7 @@ const HomeServices = () => {
           {servicesData.map((service, index) => (
             <div
               key={service.id}
-              className=" flex flex-col items-center p-6 rounded-lg shadow-lg hover:border transition border-transparent bg-blue-600  hover:bg-green-600"
+              className=" flex flex-col items-center p-6 rounded-lg shadow-lg hover:border transition border-transparent bg-[#1c3987]  hover:bg-green-600"
             >
               <img
                 src={icons[service.title] || service1} // Default to service1 if title doesn't match
@@ -66,7 +66,7 @@ const HomeServices = () => {
         </div>
         <button
           onClick={handleNavigate}
-          className="mt-8 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          className="mt-8 bg-[#1c3987] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
         >
           All Services
         </button>

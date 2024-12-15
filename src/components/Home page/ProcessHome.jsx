@@ -51,7 +51,7 @@ const ProcessHome = () => {
       <div className="w-full md:w-1/2 space-y-8 relative">
         {steps.map((step, index) => (
           <div key={index} className="flex items-start relative">
-            <div className="absolute -left-4 w-16 h-16 bg-blue-500 rounded-full flex flex-col items-center justify-center text-3xl font-bold z-10">
+            <div className="absolute -left-4 w-16 h-16 bg-[#1c3987] rounded-full flex flex-col items-center justify-center text-3xl font-bold z-10">
               <div>{step.number}</div>
               <div className="font-thin text-xs">Step</div>
             </div>

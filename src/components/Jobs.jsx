@@ -192,7 +192,7 @@ const Jobs = () => {
       <div className="md:hidden flex justify-end mb-4">
         <button 
           onClick={() => setIsFilterOpen(!isFilterOpen)}
-          className="bg-blue-600 text-white p-2 rounded-md flex items-center"
+          className="bg-[#1c3987] text-white p-2 rounded-md flex items-center"
         >
           {isFilterOpen ? <FaTimes /> : <FaFilter />}
           <span className="ml-2">{isFilterOpen ? 'Close' : 'Filters'}</span>
@@ -369,7 +369,7 @@ const Jobs = () => {
               </div>
 
               {/* Button */}
-              <button className="mt-4 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700">
+              <button className="mt-4 w-full bg-[#1c3987] text-white py-2 rounded-md hover:bg-blue-700">
                 Your Profile
               </button>
             </div>

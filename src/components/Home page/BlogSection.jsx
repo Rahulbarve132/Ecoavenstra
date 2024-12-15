@@ -48,7 +48,7 @@ const BlogSection = () => {
         ))}
       </div>
       <div className='px-6 md:px-10 flex justify-center md:justify-end'>
-        <button onClick={() => navigate("/blog")} className='text-white bg-blue-500 px-6 py-3 rounded-lg text-lg font-semibold hover:scale-105 hover:bg-blue-900 focus:outline-none'>
+        <button onClick={() => navigate("/blog")} className='text-white bg-[#1c3987] px-6 py-3 rounded-lg text-lg font-semibold hover:scale-105 hover:bg-blue-900 focus:outline-none'>
           Read More
         </button>
       </div>

@@ -43,14 +43,14 @@ const About = () => {
           <p className="text-[#868686] leading-relaxed mb-6">
             Ecoavenstra stands out as the ideal partner for your digital journey, offering a comprehensive range of web solutions tailored to your business needs. From web design and development to e-commerce solutions, mobile apps, and digital marketing, we provide everything you need to establish a strong online presence. What sets us apart is our commitment to delivering affordable excellence—visually stunning and user-friendly websites that align with your brand identity, all without exceeding your budget. Backed by a team of skilled professionals, we focus on empowering businesses with innovative strategies and a customer-centric approach to unlock their full potential in the digital world. With a proven track record as a leading web design company in India, Ecoavenstra ensures end-to-end support, guiding you from concept to execution. Trust us to transform your online presence with the perfect blend of creativity, technology, and strategy.
           </p>
-          <button className="w-full md:w-auto mt-6 bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition duration-300">
+          <button className="w-full md:w-auto mt-6 bg-[#1c3987] text-white px-6 py-2 rounded hover:bg-blue-700 transition duration-300">
             Learn More
           </button>
         </div>
 
         {/* Image Section */}
         <div className="order-1 md:order-2 w-full max-w-sm mx-auto flex flex-col shadow-lg shadow-[#5e84bd] rounded-3xl bg-[#161616] gap-4 py-10">
-          <div className="text-black font-bold text-xl bg-blue-600 px-2 rounded-md self-center">
+          <div className="text-black font-bold text-xl bg-[#1c3987] px-2 rounded-md self-center">
             Our Brand Identities
           </div>
           <div className="w-48 md:w-60 mx-auto">

@@ -180,7 +180,7 @@ const EmployerForm = () => {
 
         <button
           type="submit"
-          className="w-full py-3 text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full py-3 text-white bg-[#1c3987] rounded-lg hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
           disabled={loading}
         >
           Get a Callback
