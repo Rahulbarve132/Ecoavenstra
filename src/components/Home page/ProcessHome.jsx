@@ -61,9 +61,7 @@ const ProcessHome = () => {
             </div>
           </div>
         ))}
-        <button className="ml-8 mt-4 bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-green-600 transition-colors">
-          Book A Call
-        </button>
+        
       </div>
     </div>
   );

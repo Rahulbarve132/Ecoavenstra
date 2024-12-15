@@ -14,7 +14,7 @@ const About = () => {
       <div className="bg-black h-auto md:h-96 text-white py-8 flex justify-center relative">
         <div className="absolute inset-0">
           <img 
-            src="src/assets/bg-about.png" 
+            src="/src/assets/bg-about.png" 
             alt="" 
             className="w-full h-full object-cover"
           />
