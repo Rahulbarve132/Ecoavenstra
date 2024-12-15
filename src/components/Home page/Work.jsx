@@ -65,7 +65,7 @@ const Work = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-[1000px]  object-cover rounded-md"
+                  className="md:w-[1000px] w-80  object-cover rounded-md"
                 />
                 </div>
                 
@@ -79,13 +79,13 @@ const Work = () => {
           {/* Navigation */}
           <button
             onClick={handlePrev}
-            className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-700 text-white p-3 rounded-full shadow-lg hover:bg-[#1c3987]"
+            className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-700 text-white p-3 rounded-full shadow-lg hover:bg-blue-600"
           >
             ❮
           </button>
           <button
             onClick={handleNext}
-            className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-700 text-white p-3 rounded-full shadow-lg hover:bg-[#1c3987]"
+            className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-700 text-white p-3 rounded-full shadow-lg hover:bg-blue-600"
           >
             ❯
           </button>

@@ -143,12 +143,12 @@ const Jobs = () => {
                   {category.trending}
                 </div>
 
-                <h2 className="text-2xl md:text-3xl font-bold text-blue-300">
+                <h2 className="text-2xl md:text-3xl hidden md:flex  font-bold text-blue-300">
                   {category.title}
                 </h2>
 
                 <h2
-                  className="text-4xl md:text-6xl font-bold text-transparent absolute right-[-50px] group-hover:right-[-30px] group-hover:transition-transform group-hover:ease-in-out duration-1000"
+                  className="text-4xl pt-8 md:pt-0 md:text-6xl font-bold text-transparent md:absolute md:right-[-50px] md:group-hover:right-[-30px] md:group-hover:transition-transform md:group-hover:ease-in-out md:duration-1000"
                   style={{
                     WebkitTextStroke: "1px #5e5858",
                     textShadow: "0px 0px 10px rgba(255, 255, 255, 0)",
