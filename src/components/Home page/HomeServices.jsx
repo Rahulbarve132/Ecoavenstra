@@ -52,12 +52,12 @@ const HomeServices = () => {
           {servicesData.map((service, index) => (
             <div
               key={service.id}
-              className=" flex flex-col items-center p-6 rounded-lg shadow-lg hover:border transition border-transparent bg-[#1c3987]  hover:bg-green-600"
+              className=" flex flex-col items-center p-6 rounded-lg shadow-lg hover:border transition border-transparent bg-[#1c3987] group  hover:bg-green-600"
             >
               <img
                 src={icons[service.title] || service1} // Default to service1 if title doesn't match
                 alt={`service_${index}`}
-                className="text-4xl h-40 py-3 hover:scale-105 transition-transform duration-300"
+                className="text-4xl h-40 py-3 group-hover:scale-105 transition-transform duration-300"
               />
               <h3 className="text-2xl font-semibold mb-4">{service.title}</h3>
               <p>{service.shortDescription}</p>
