@@ -19,7 +19,7 @@ const BlogPage = () => {
 
         if (articles.length > 0) {
           setFeaturedArticle(articles[0]); // Set the first article as the featured article
-          setRecentArticles(articles.slice(1)); // Set the remaining articles as recent articles
+          setRecentArticles(articles.slice()); // Set the remaining articles as recent articles
         }
       } catch (error) {
         console.error('Error fetching articles:', error);

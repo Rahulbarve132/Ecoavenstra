@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import './Technology.css';
 
 const data = [
   
@@ -50,24 +51,50 @@ const data = [
 ];
 
 const Tchnology = () => {
-  AOS.init()  
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
-   
   return (
     <div className='px-4 py-8'>
-      <div data-aos="fade-up" className='text-white text-3xl sm:text-5xl flex justify-center font-semibold pt-4 pb-10 sm:pb-20'>Technologies We Master</div>
-      <div className='flex flex-wrap justify-center'>
+      <div data-aos="fade-up" className='text-white text-3xl sm:text-5xl flex justify-center font-semibold pt-4 pb-10 sm:pb-20'>
+        Technologies We Master
+      </div>
+      <div className='flex flex-wrap justify-center gap-8'>
         {data.map((item, index) => (
-          <div key={index} data-aos="flip-right"  className=' box h-[450px] p-8 py-4 sm:w-1/4 w-full font-semibold bg-[#1c3987]  hover:bg-green-600 flex flex-col rounded-xl mx-4 mb-8'>
-            
-            <div className='flex py-6 text-white text-4xl'>{item.title}</div>
-            {item.categories.map((category, idx) => (
-              <div key={idx}>
-                <div className='text-2xl font-semibold text-white py-1'>{category.subtitle}</div>
-                <div className='text-white font-light'>{category.items}</div>
+          <div key={index} data-aos="flip-right" className="cyber-container noselect">
+            <div className="cyber-canvas">
+              <div className="cyber-card">
+                <div className="card-content">
+                  <div className="card-glare"></div>
+                  <div className="cyber-lines">
+                    <span></span><span></span><span></span><span></span>
+                  </div>
+                  <div className="title">{item.title}</div>
+                  <div className="tech-content">
+                    {item.categories.map((category, idx) => (
+                      <div key={idx} className="category-content">
+                        <div className='subtitle'>{category.subtitle}</div>
+                        <div className='items'>{category.items}</div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="glowing-elements">
+                    <div className="glow-1"></div>
+                    <div className="glow-2"></div>
+                    <div className="glow-3"></div>
+                  </div>
+                  <div className="card-particles">
+                    <span></span><span></span><span></span>
+                    <span></span><span></span><span></span>
+                  </div>
+                  <div className="corner-elements">
+                    <span></span><span></span><span></span><span></span>
+                  </div>
+                  <div className="scan-line"></div>
+                </div>
               </div>
-            ))}
-          
+            </div>
           </div>
         ))}
       </div>
