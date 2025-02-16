@@ -66,23 +66,12 @@ const JobDescription = () => {
         <h3 className="font-semibold mb-2">What You Will Do:</h3>
         <div className="whitespace-pre-wrap mb-4">{job.jobDescription}</div>
         
-        <h3 className="font-semibold mb-2">What You Will Need:</h3>
-        <ul className="list-disc pl-5 mb-4">
-          <li>Overall experience of 3-5 yrs with at least 2 yrs in product management in a tech-led company.</li>
-          <li>Experience in working with SQL: Dashboard creation & Automation using SQL and Excel.</li>
-          <li>Experience in handling both - Regular publishing of dashboards and performing ROAs for any requirements.</li>
-          <li>Exceptional problem-solving skills based on first principles of thinking.</li>
-          <li>Strong bias for action and creating impact.</li>
-          <li>Good understanding, and comfort with product management processes such as A/B experimentation, writing requirement documents, managing backlogs, and creating roadmaps.</li>
-          <li>Good communication and stakeholder management skills to get work done across different functions and drive product development.</li>
-          <li>Experience in working with Data Science is preferred.</li>
-        </ul>
+        
       </div>
 
       <div className="bg-white shadow-md rounded-lg p-6">
         <h3 className="font-semibold mb-2">Additional Information:</h3>
         <p><strong>Role:</strong> {job.jobTitle}</p>
-        <p><strong>Industry Type:</strong> FinTech / Payments</p>
         <p><strong>Employment Type:</strong> {job.jobType}</p>
       </div>
 

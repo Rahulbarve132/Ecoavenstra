@@ -50,17 +50,21 @@ const HomeServices = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {servicesData.map((service, index) => (
-            <div
-              key={service.id}
-              className=" flex flex-col items-center p-6 rounded-lg shadow-lg hover:border transition border-transparent bg-[#1c3987] group  hover:bg-green-600"
-            >
-              <img
-                src={icons[service.title] || service1} // Default to service1 if title doesn't match
-                alt={`service_${index}`}
-                className="text-4xl h-40 py-3 group-hover:scale-105 transition-transform duration-300"
-              />
-              <h3 className="text-2xl font-semibold mb-4">{service.title}</h3>
-              <p>{service.shortDescription}</p>
+            <div key={service.id} className="flip-card h-64 cursor-pointer">
+              <div className="flip-card-inner relative w-full h-full transition-transform duration-500">
+                <div className="flip-card-front absolute w-full h-full bg-gray-800 rounded-lg p-6 flex flex-col items-center justify-center backface-hidden">
+                  <img
+                    src={icons[service.title] || service1}
+                    alt={`service_${index}`}
+                    className="h-20 mx-auto mb-4"
+                  />
+                  <p className="title text-xl font-semibold">{service.title}</p>
+                </div>
+                <div className="flip-card-back absolute w-full h-full bg-gray-800 rounded-lg p-6 flex flex-col items-center justify-center backface-hidden transform rotate-y-180">
+                  <p className="title text-xl font-semibold mb-4">Description</p>
+                  <p className="text-sm">{service.shortDescription}</p>
+                </div>
+              </div>
             </div>
           ))}
         </div>
@@ -71,6 +75,23 @@ const HomeServices = () => {
           All Services
         </button>
       </div>
+      <style jsx>{`
+        .flip-card-inner {
+          transform-style: preserve-3d;
+        }
+        
+        .flip-card:hover .flip-card-inner {
+          transform: rotateY(180deg);
+        }
+        
+        .backface-hidden {
+          backface-visibility: hidden;
+        }
+        
+        .rotate-y-180 {
+          transform: rotateY(180deg);
+        }
+      `}</style>
     </section>
   );
 };
