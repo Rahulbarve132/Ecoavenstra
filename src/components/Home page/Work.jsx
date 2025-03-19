@@ -44,7 +44,7 @@ const Work = () => {
       description:
         "Market Place is a full-stack e-commerce platform built with NextJS, Node.js, and Tailwind CSS. It offers a wide range of products, secure payment gateways, and a seamless shopping experience.",
       image: MarketPlace, // Replace with your image path
-      link: "https://example.com/project1",
+      link: "https://market-place-five-blond.vercel.app/",
     },
     {
       id: 5,

@@ -12,11 +12,13 @@ import LogIn from './components/LogIn';
 import EmployerForm from './components/EmployerForm';
 import ReadMorePage from './components/ReadMorePage';
 import JobDescription from './components/JobDescription';
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   return (
     <Router>
       <Header />
+      <Analytics/>
       <Routes>
         <Route path="/" element={<Body />} />
         <Route path="/services" element={<Services />} />
