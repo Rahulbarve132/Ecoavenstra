@@ -3,6 +3,34 @@ import axios from "axios";
 import serviceVideo from "../../src/assets/services_video.mp4";
 import { Link } from "react-router-dom";
 
+const servicesData = [
+  {
+    id: 7,
+    title: "Web Development",
+    description: "From lightweight MVPs to complex web-based products, our experts can help make your vision a reality, while relieving you of all technical concerns."
+  },
+  {
+    id: 8,
+    title: "eCommerce Development",
+    description: "Our experts can create a modern, intuitive and eco-friendly store to exhibit your products and services to people worldwide."
+  },
+  {
+    id: 9,
+    title: "Digital Marketing Services",
+    description: "We could really assist you in enhancing brand authority and exposure. You are really only one tap away from reaching your intended audience."
+  },
+  {
+    id: 10,
+    title: "UI/UX Designing",
+    description: "Our experts create extraordinary UI/UX design ideas consistent with the latest trends and technologies."
+  },
+  {
+    id: 11,
+    title: "Portfolio & Landing Page Development",
+    description: "Creating visually appealing, user-friendly web pages that showcase an individual's or business's skills, products, or services."
+  }
+];
+
 const Services = () => {
   const [services, setServices] = useState([]);
 
