@@ -78,7 +78,7 @@ const Footer = () => {
           <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
           <div className="sm:flex sm:items-center sm:justify-between">
             <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-            Copyright 2024-2025{" "}
+            Copyright 2025-2026{" "}
               <a href="/" className="hover:underline">
               @ Ecoavenstra Hr Infotech Pvt Ltd
               </a>

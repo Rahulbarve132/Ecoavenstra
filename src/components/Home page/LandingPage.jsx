@@ -32,7 +32,7 @@ const LandingPage = () => {
     <div className="relative h-screen">
       <div className="w-full absolute inset-0 overflow-hidden">
         <video className="videoTag w-full h-full object-cover" autoPlay loop muted>
-          <source src={background_1} type="video/mp4" />
+          <source src="https://res.cloudinary.com/da17aac55/video/upload/v1742571096/background_1_vmaisy.mp4" type="video/mp4" />
         </video>
       </div>
 
@@ -66,11 +66,11 @@ const LandingPage = () => {
         <Social />
       </div>
 
-      {isMobile && (
+      {/* {isMobile && (
         <div className="absolute bottom-24 right-10">
           <TimeCard />
         </div>
-      )}
+      )} */}
 
       <Modal isOpen={isModalOpen} onClose={closeModal}>
         <ContactForm />

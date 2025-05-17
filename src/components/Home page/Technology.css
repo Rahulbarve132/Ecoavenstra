@@ -3,7 +3,10 @@
   width: 300px;
   height: 400px;
   transition: 200ms;
-  margin: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 10px;
+  z-index: 10;
 }
 
 .cyber-canvas {
