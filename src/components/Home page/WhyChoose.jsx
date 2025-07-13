@@ -6,7 +6,7 @@ import 'aos/dist/aos.css';
 const WhyChoose = () => {
   AOS.init();
   return (
-    <div className='px-4 py-8'>
+    <div className='px-4 py-8 pb-16  bg-[#101010]'>
       <div data-aos="fade-up" className='text-white text-3xl sm:text-5xl flex justify-center font-semibold pt-4 pb-10 sm:pb-20'>
         Why Ecoavenstra ?
       </div>

@@ -56,8 +56,8 @@ const Tchnology = () => {
   }, []);
 
   return (
-    <div className='px-4 py-8'>
-      <div data-aos="fade-up" className='text-white text-3xl sm:text-5xl flex justify-center font-semibold pt-4 pb-10 sm:pb-20'>
+    <div className='px-4 py-8 bg-[#101010]'>
+      <div data-aos="fade-up" className='text-white text-3xl sm:text-5xl flex justify-center font-semibold pt-4 pb-8 sm:pb-12'>
         Technologies We Master
       </div>
       <div className='flex flex-wrap justify-center gap-8'>

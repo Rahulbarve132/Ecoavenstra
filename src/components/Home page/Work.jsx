@@ -2,10 +2,11 @@ import { useState, useEffect, useRef } from "react"
 import AddBazaar from "/src/assets/AddBazaar.png";
 import MarketPlace from "/src/assets/Market.png";
 import EventX from "/src/assets/EventX.png";
-import LuxeEstate from "/src/assets/image.png";
+import LuxeEstate from "/src/assets/RE1.png";
 import PrestigeEstate from "/src/assets/RE2.png"; 
 import laisalife from "/src/assets/laisalife.png";
 import VdoAds from "/src/assets/VdoAds.png";
+import Ecoavenstra from "/src/assets/image.png";
 
 const Work = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -15,6 +16,14 @@ const Work = () => {
 
   // Sample project data - replace with your own
   const projects = [
+    {
+      id: 12,
+      title: "Ecoavenstra",
+      description:
+        "Ecoavenstra is a leading provider of innovative solutions in the field of environmental technology, specializing in sustainable practices and eco-friendly products.",
+      image: Ecoavenstra, // Replace with your image path
+      link: "https://www.ecoavenstra.com/",
+    },
    
     {
       id: 1,

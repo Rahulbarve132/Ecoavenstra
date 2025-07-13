@@ -41,7 +41,7 @@ const HomeServices = () => {
   };
 
   return (
-    <section className="bg-black text-white py-8  px-4">
+    <section className="bg-black text-white py-8 pb-24  px-4">
       <div className="container  text-center">
         <div className='text-white text-3xl sm:text-5xl flex justify-center font-semibold pt-4 pb-10 sm:pb-20'>
           Our Services
