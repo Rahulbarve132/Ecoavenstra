@@ -1,11 +1,12 @@
 import { useState, useEffect, useRef } from "react"
-import Ecoavenstra from "/src/assets/Ecoavenstra.png";
 import AddBazaar from "/src/assets/AddBazaar.png";
-import MarketPlace from "/src/assets/MarketPlace.png";
+import MarketPlace from "/src/assets/Market.png";
 import EventX from "/src/assets/EventX.png";
-import LuxeEstate from "/src/assets/Real_Estate_1.png";
-import PrestigeEstate from "/src/assets/Real_Estate_2.png"; 
-import Venendra_Portfolio from "/src/assets/Venendra_Portfolio.png";
+import LuxeEstate from "/src/assets/image.png";
+import PrestigeEstate from "/src/assets/RE2.png"; 
+import laisalife from "/src/assets/laisalife.png";
+import VdoAds from "/src/assets/VdoAds.png";
+
 const Work = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isAnimating, setIsAnimating] = useState(false)
@@ -14,21 +15,22 @@ const Work = () => {
 
   // Sample project data - replace with your own
   const projects = [
+   
     {
       id: 1,
-      x: "Ecoavenstra Website",
+      title: "LaisaLife Sciences Pvt Ltd",
       description:
-        "A full-stack web application focused on sustainable solutions, developed using React, Node.js, and Tailwind CSS.",
-      image: Ecoavenstra, // Replace with your image path
-      link: "https://ecoavenstra.com",
+        "LaisaLife Sciences Pvt Ltd is a leading provider of innovative solutions in the life sciences industry, specializing in research and development, manufacturing, and distribution of high-quality products.",
+      image: laisalife, // Replace with your image path
+      link: "https://www.laisalife.com/",
     },
     {
       id: 2,
-      x: "Venendra Website",
+      title: "VdoAds",
       description:
-        "A sleek and modern portfolio website designed to showcase projects, skills, and achievements. Built with responsive design principles, it provides an engaging and professional platform for individuals or businesses to highlight their work, share their story, and connect with potential clients or collaborators.",
-      image: Venendra_Portfolio, // Replace with your image path
-      link: "https://venendra-portfolio.vercel.app/",
+        "VdoAds is a plateform where you can create a post and sell your product. It is built with Next.js, Framer Mortion , Redux , Express.js, Node.js, Typescript and Tailwind CSS.",
+      image: VdoAds, // Replace with your image path
+      link: "https://example.com/project1",
     },
     {
       id: 3,
@@ -46,14 +48,7 @@ const Work = () => {
       image: MarketPlace, // Replace with your image path
       link: "https://market-place-five-blond.vercel.app/",
     },
-    {
-      id: 5,
-      title: "AddBazaar",
-      description:
-        "AddBazaar is a plateform where you can create a post and sell your product. It is built with Next.js, Framer Mortion , Redux , Express.js, Node.js, Typescript and Tailwind CSS.",
-      image: AddBazaar, // Replace with your image path
-      link: "https://example.com/project1",
-    },
+    
     {
       id: 6,
       title: "LuxeEstate",

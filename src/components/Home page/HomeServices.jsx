@@ -45,7 +45,7 @@ const HomeServices = () => {
       <div className="container  text-center">
         <div className='text-white text-3xl sm:text-5xl flex justify-center font-semibold pt-4 pb-10 sm:pb-20'>
           Our Services
-        </div>        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 z-10 gap-8">
+        </div>        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8">
           {servicesData.map((service, index) => (
             <div key={service.id} className="cyber-container noselect ">
               <div className="cyber-canvas">
